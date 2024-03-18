@@ -1,0 +1,16 @@
+.MAX4737EUD-plus- :1 ;Analog Switch ICs 4.5Ohm Quad SPST Analog Switch
+SOP65P640X110-14N
+*STM IC
+*NGS
+*PLB 1="NO1" 2="COM1" 3="NO2" 4="COM2" 5="IN2" 6="IN3" 7="GND" 8="NO3" 9="COM3" 10="COM4" 11="NO4" 12="IN4" 13="IN1" 14="V+"
+*MXP 14
+*DFN MAX4737EUD-plus-
+~!Mouser Part Number (700-MAX4737EUD)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Analog-Devices-Maxim-Integrated/MAX4737EUD%2b?qs=LHmEVA8xxfbKICdohzHcgA%3D%3D)
+~!Manufacturer_Name (Analog Devices)
+~!Manufacturer_Part_Number (MAX4737EUD+)
+~!Link Datasheet (-)
+~!Height (1.1mm)
+~!3D_Model (MAX4737EUD+)
+MAX4737EUD-plus-
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!I 6.1!I 7.1!G 14.1!U 13.1!I 12.1!I 11.1!U 10.1!U 9.1!U 8.1!U 
