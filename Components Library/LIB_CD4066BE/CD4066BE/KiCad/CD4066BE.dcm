@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CD4066BE
+D CMOS Quad Bilateral Switch
+K
+F https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-SFU2/DSASFU100028824.pdf
+$ENDCMP
+#
+#End Doc Library
