@@ -3956,22 +3956,22 @@
 				)
 			)
 		)
-		(symbol "Switch:SW_DIP_x08"
+		(symbol "Switch:SW_DIP_x04"
 			(pin_names
 				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 0 13.97 0)
+				(at 0 8.89 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "SW_DIP_x08"
-				(at 0 -11.43 0)
+			(property "Value" "SW_DIP_x04"
+				(at 0 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3996,7 +3996,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "8x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
+			(property "Description" "4x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4014,7 +4014,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SW?DIP?x8*"
+			(property "ki_fp_filters" "SW?DIP?x4*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4023,29 +4023,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "SW_DIP_x08_0_0"
-				(circle
-					(center -2.032 -7.62)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -2.032 -5.08)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "SW_DIP_x04_0_0"
 				(circle
 					(center -2.032 -2.54)
 					(radius 0.508)
@@ -4082,52 +4060,6 @@
 				(circle
 					(center -2.032 5.08)
 					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -2.032 7.62)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -2.032 10.16)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 -7.4676) (xy 2.3622 -6.4262)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 -4.9276) (xy 2.3622 -3.8862)
-					)
 					(stroke
 						(width 0)
 						(type default)
@@ -4184,52 +4116,6 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -1.524 7.747) (xy 2.3622 8.7884)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 10.287) (xy 2.3622 11.3284)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 -7.62)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 -5.08)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(circle
 					(center 2.032 -2.54)
 					(radius 0.508)
@@ -4274,33 +4160,11 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 2.032 7.62)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 10.16)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 			)
-			(symbol "SW_DIP_x08_0_1"
+			(symbol "SW_DIP_x04_0_1"
 				(rectangle
-					(start -3.81 12.7)
-					(end 3.81 -10.16)
+					(start -3.81 7.62)
+					(end 3.81 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -4310,9 +4174,9 @@
 					)
 				)
 			)
-			(symbol "SW_DIP_x08_1_1"
+			(symbol "SW_DIP_x04_1_1"
 				(pin passive line
-					(at -7.62 10.16 0)
+					(at -7.62 5.08 0)
 					(length 5.08)
 					(name "~"
 						(effects
@@ -4330,133 +4194,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 -5.08 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 5.08 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 7.62 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 10.16 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 7.62 0)
+					(at -7.62 2.54 0)
 					(length 5.08)
 					(name "~"
 						(effects
@@ -4474,7 +4212,7 @@
 					)
 				)
 				(pin passive line
-					(at -7.62 5.08 0)
+					(at -7.62 0 0)
 					(length 5.08)
 					(name "~"
 						(effects
@@ -4492,7 +4230,7 @@
 					)
 				)
 				(pin passive line
-					(at -7.62 2.54 0)
+					(at -7.62 -2.54 0)
 					(length 5.08)
 					(name "~"
 						(effects
@@ -4510,7 +4248,7 @@
 					)
 				)
 				(pin passive line
-					(at -7.62 0 0)
+					(at 7.62 -2.54 180)
 					(length 5.08)
 					(name "~"
 						(effects
@@ -4528,7 +4266,7 @@
 					)
 				)
 				(pin passive line
-					(at -7.62 -2.54 0)
+					(at 7.62 0 180)
 					(length 5.08)
 					(name "~"
 						(effects
@@ -4546,7 +4284,7 @@
 					)
 				)
 				(pin passive line
-					(at -7.62 -5.08 0)
+					(at 7.62 2.54 180)
 					(length 5.08)
 					(name "~"
 						(effects
@@ -4564,7 +4302,7 @@
 					)
 				)
 				(pin passive line
-					(at -7.62 -7.62 0)
+					(at 7.62 5.08 180)
 					(length 5.08)
 					(name "~"
 						(effects
@@ -4574,24 +4312,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -7.62 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5222,10 +4942,6 @@
 		(uuid "056d8752-41da-43ca-889e-53a274fa0b03")
 	)
 	(no_connect
-		(at 20.32 125.73)
-		(uuid "09100e65-2739-4fae-b3a6-45f914d971c9")
-	)
-	(no_connect
 		(at 266.7 125.73)
 		(uuid "0bd28673-0499-4a98-8654-854086b0970f")
 	)
@@ -5244,6 +4960,10 @@
 	(no_connect
 		(at 266.7 123.19)
 		(uuid "319740e5-9e9a-4bc8-b260-7e6741880791")
+	)
+	(no_connect
+		(at 20.32 120.65)
+		(uuid "3b36514e-4789-4a04-bb64-2c82be5bdeb4")
 	)
 	(no_connect
 		(at 35.56 140.97)
@@ -5286,12 +5006,12 @@
 		(uuid "baa3752d-af2c-449a-aca8-8dda1c73dc07")
 	)
 	(no_connect
-		(at 266.7 128.27)
-		(uuid "cf4a5830-e0f4-4ac9-83e1-b6ac64be45e5")
+		(at 35.56 120.65)
+		(uuid "bebc3e15-213a-4872-b914-e78e49ccf58b")
 	)
 	(no_connect
-		(at 35.56 125.73)
-		(uuid "e8aec22f-38db-411a-a35b-0f0cf92b086e")
+		(at 266.7 128.27)
+		(uuid "cf4a5830-e0f4-4ac9-83e1-b6ac64be45e5")
 	)
 	(wire
 		(pts
@@ -7128,17 +6848,6 @@
 		)
 		(uuid "07d25282-a63e-474f-ad67-56a94af22e53")
 	)
-	(label "S6out"
-		(at 35.56 128.27 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0986c5c8-83c7-4c66-b761-85f3a382e122")
-	)
 	(label "ControlAF_3B"
 		(at 266.7 151.13 0)
 		(fields_autoplaced yes)
@@ -7303,17 +7012,6 @@
 			(justify left bottom)
 		)
 		(uuid "2883d75d-3f79-4c0a-b48d-5629f4ddad73")
-	)
-	(label "S6in"
-		(at 20.32 128.27 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2e001a9e-c25f-4647-a83f-08fb8a9ab294")
 	)
 	(label "DAC_CSbar"
 		(at 29.21 39.37 180)
@@ -7579,6 +7277,17 @@
 		)
 		(uuid "605831da-03ac-480a-89d4-da5fec955594")
 	)
+	(label "S4in"
+		(at 20.32 128.27 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "607e4aa6-04a8-4ba1-9915-344d8a678262")
+	)
 	(label "-5V"
 		(at 247.65 85.09 180)
 		(fields_autoplaced yes)
@@ -7733,16 +7442,16 @@
 		)
 		(uuid "75845909-d6c4-4ff1-82ad-a55aa379e5e3")
 	)
-	(label "S5out"
-		(at 35.56 130.81 0)
+	(label "S6in"
+		(at 20.32 123.19 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "76908f50-e6ff-468b-bda9-2da81e755efb")
+		(uuid "79b55dde-0b21-4a9c-b649-2fe2468323ec")
 	)
 	(label "Control10B"
 		(at 254 133.35 180)
@@ -8053,17 +7762,6 @@
 		(uuid "aba20b43-48f1-4cf5-8a65-cbac0fda259f")
 	)
 	(label "S4out"
-		(at 35.56 133.35 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "abefaf51-7e2b-4b12-b0f7-738078df9a8d")
-	)
-	(label "S4out"
 		(at 132.08 41.91 180)
 		(fields_autoplaced yes)
 		(effects
@@ -8129,6 +7827,17 @@
 		)
 		(uuid "b4c37026-b29b-448d-bd21-c1a18228c543")
 	)
+	(label "S5in"
+		(at 20.32 125.73 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b73b79c6-8cdc-4516-820b-1219a0a11cbf")
+	)
 	(label "-5VD"
 		(at 46.99 194.31 180)
 		(fields_autoplaced yes)
@@ -8150,6 +7859,17 @@
 			(justify right bottom)
 		)
 		(uuid "b82e16b2-e55c-4412-beed-4c4e915406f3")
+	)
+	(label "S6out"
+		(at 35.56 123.19 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b847d00c-a01d-4397-b322-aebe2d47eae9")
 	)
 	(label "DAC_output"
 		(at 68.58 39.37 0)
@@ -8184,28 +7904,6 @@
 		)
 		(uuid "b984477b-0263-4211-ad2b-eebee3d56ec0")
 	)
-	(label "S4in"
-		(at 20.32 133.35 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b98e0a87-dc98-4df9-aa93-fb85ea4cb9b8")
-	)
-	(label "S5in"
-		(at 20.32 130.81 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b9a620cf-3806-476a-a299-ce97f2842aaa")
-	)
 	(label "ControlAF_4B"
 		(at 109.22 191.77 0)
 		(fields_autoplaced yes)
@@ -8238,6 +7936,17 @@
 			(justify right bottom)
 		)
 		(uuid "bc2c91ef-a270-41f0-aee9-5bce0440c210")
+	)
+	(label "S4out"
+		(at 35.56 128.27 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "be6fcf86-e5fd-4de2-be3a-cc423fe16f27")
 	)
 	(label "-5V"
 		(at 260.35 85.09 0)
@@ -8359,6 +8068,17 @@
 			(justify right bottom)
 		)
 		(uuid "d37b755a-ecdb-46fd-a37e-0f4f2d958c63")
+	)
+	(label "S5out"
+		(at 35.56 125.73 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d3da2b01-fa5d-498e-bfb7-89ae990b1486")
 	)
 	(label "S6out"
 		(at 132.08 46.99 180)
@@ -10192,6 +9912,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_DIP_x04")
+		(at 27.94 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "441e69a7-7b28-45e4-940b-1ecf754a56d6")
+		(property "Reference" "SW2"
+			(at 35.052 145.796 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_DIP_x04"
+			(at 35.052 148.336 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_DIP_SPSTx04_Slide_9.78x12.34mm_W7.62mm_P2.54mm"
+			(at 27.94 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 27.94 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
+			(at 27.94 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "6f8aafa3-afd2-4340-be32-bad2558585ab")
+		)
+		(pin "3"
+			(uuid "eb9d9b26-f1d2-4dd1-a510-d45e97c0f6b8")
+		)
+		(pin "1"
+			(uuid "c2908e2c-a911-4f4f-9be2-cc9fbaffc77b")
+		)
+		(pin "8"
+			(uuid "9ef2129e-532a-48df-b578-3068255af9d8")
+		)
+		(pin "6"
+			(uuid "ec07e955-ed80-4239-8bd3-943be9d9d7e0")
+		)
+		(pin "4"
+			(uuid "4ca1968b-0a7f-46c7-81c6-17afa4f4b7ce")
+		)
+		(pin "2"
+			(uuid "d9217633-2c8b-4233-833d-d3e74155b38a")
+		)
+		(pin "7"
+			(uuid "de9025f4-bf19-4a15-909c-3ab56d0b9df5")
+		)
+		(instances
+			(project "MiniCircuit"
+				(path "/ed26f7ee-1e82-4f03-9269-cad330ded895"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GNDD")
 		(at 135.89 173.99 0)
 		(unit 1)
@@ -10283,7 +10088,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder"
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 266.7 65.532 90)
 			(effects
 				(font
@@ -10655,116 +10460,6 @@
 			(project "MiniCircuit"
 				(path "/ed26f7ee-1e82-4f03-9269-cad330ded895"
 					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_DIP_x08")
-		(at 27.94 135.89 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5fd05e1c-ab36-4b64-b19f-2faaacc5a5cc")
-		(property "Reference" "SW1"
-			(at 27.94 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_DIP_x08"
-			(at 27.94 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_DIP_SPSTx08_Slide_9.78x22.5mm_W7.62mm_P2.54mm"
-			(at 27.94 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 27.94 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "8x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
-			(at 27.94 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "11"
-			(uuid "ec393ceb-ccf5-4a1f-bf3b-037326e16167")
-		)
-		(pin "13"
-			(uuid "908fafe9-bfe6-4754-9558-edc028212b81")
-		)
-		(pin "16"
-			(uuid "e7f3e110-0cbd-4c25-85c2-1c1359d8273d")
-		)
-		(pin "15"
-			(uuid "16f70687-566e-46a3-a96f-87284ae9add3")
-		)
-		(pin "14"
-			(uuid "3098a67f-7452-40a8-b988-21c55674d30f")
-		)
-		(pin "1"
-			(uuid "9552a9d1-00dd-4324-9de6-bbe4a6ece544")
-		)
-		(pin "10"
-			(uuid "2dee4583-fc9e-4814-8864-2cb82a832636")
-		)
-		(pin "12"
-			(uuid "b2a6a8a5-e7f4-4331-aa0f-bc9693e974a5")
-		)
-		(pin "2"
-			(uuid "ee749ca9-1d74-49c7-b925-f44f4ad41462")
-		)
-		(pin "3"
-			(uuid "3504e4d3-8fa3-448f-855f-0366259f741c")
-		)
-		(pin "4"
-			(uuid "e09c85bb-30b5-47a1-a483-3b451c12f700")
-		)
-		(pin "5"
-			(uuid "f33ee075-6928-4d1a-a63f-fd8642374609")
-		)
-		(pin "6"
-			(uuid "3b0bf15a-c0aa-46ac-9a98-813b9350af98")
-		)
-		(pin "7"
-			(uuid "4995b407-7384-49cb-a51e-c0836304414e")
-		)
-		(pin "8"
-			(uuid "da0c75e6-8ce0-4505-ab54-876b7b1c852e")
-		)
-		(pin "9"
-			(uuid "8a76f01b-86cb-47de-b275-687946135570")
-		)
-		(instances
-			(project "MiniCircuit"
-				(path "/ed26f7ee-1e82-4f03-9269-cad330ded895"
-					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -12050,7 +11745,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder"
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 242.57 36.322 90)
 			(effects
 				(font
@@ -12887,7 +12582,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder"
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 241.3 52.832 90)
 			(effects
 				(font
@@ -13962,7 +13657,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder"
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 267.97 52.832 90)
 			(effects
 				(font
@@ -15187,6 +14882,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_DIP_x04")
+		(at 27.94 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e13e32c8-ea4c-431c-ba48-3cefe7dc1f9d")
+		(property "Reference" "SW1"
+			(at 18.288 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_DIP_x04"
+			(at 18.288 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_DIP_SPSTx04_Slide_9.78x12.34mm_W7.62mm_P2.54mm"
+			(at 27.94 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 27.94 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
+			(at 27.94 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "6a94c1f5-3d1c-4c5b-ad86-7db60f4fff99")
+		)
+		(pin "3"
+			(uuid "7c98e368-f0cd-46ee-81be-7bcf9a8727b0")
+		)
+		(pin "1"
+			(uuid "92430be6-a53d-4982-b3e9-2118a6958b9d")
+		)
+		(pin "8"
+			(uuid "2d770ffc-6ec8-4f7d-b427-9275086040bd")
+		)
+		(pin "6"
+			(uuid "c17c17fd-dc9f-4c6a-9547-7e7ab8f24fc5")
+		)
+		(pin "4"
+			(uuid "befe7568-4d5f-450b-9e65-c02f1115b075")
+		)
+		(pin "2"
+			(uuid "a385d845-db38-4639-966a-f5673175c4fd")
+		)
+		(pin "7"
+			(uuid "94889944-10f7-4f18-9ebf-0a426885dda9")
+		)
+		(instances
+			(project "MiniCircuit"
+				(path "/ed26f7ee-1e82-4f03-9269-cad330ded895"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 54.61 173.99 90)
 		(unit 1)
@@ -16065,7 +15845,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder"
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 269.24 36.322 90)
 			(effects
 				(font
