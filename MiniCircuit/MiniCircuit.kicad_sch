@@ -5226,6 +5226,10 @@
 		(uuid "09100e65-2739-4fae-b3a6-45f914d971c9")
 	)
 	(no_connect
+		(at 266.7 125.73)
+		(uuid "0bd28673-0499-4a98-8654-854086b0970f")
+	)
+	(no_connect
 		(at 266.7 156.21)
 		(uuid "1a1c0fd9-8821-4c68-873d-9429473a4209")
 	)
@@ -5234,12 +5238,12 @@
 		(uuid "1d2e366a-325b-4eaf-9403-cf301d3cd881")
 	)
 	(no_connect
-		(at 266.7 140.97)
-		(uuid "248fc106-6644-418a-93da-e2daababa8ba")
-	)
-	(no_connect
 		(at 266.7 153.67)
 		(uuid "271e0244-a3f1-46fa-b75e-8e3237fd7b47")
+	)
+	(no_connect
+		(at 266.7 123.19)
+		(uuid "319740e5-9e9a-4bc8-b260-7e6741880791")
 	)
 	(no_connect
 		(at 35.56 140.97)
@@ -5272,10 +5276,6 @@
 	(no_connect
 		(at 35.56 82.55)
 		(uuid "9a621d6a-e03f-4abf-a995-81c6aa4211ae")
-	)
-	(no_connect
-		(at 266.7 138.43)
-		(uuid "9be5251c-d5da-4ff8-9a06-10086af6f617")
 	)
 	(no_connect
 		(at 266.7 135.89)
@@ -7117,17 +7117,6 @@
 		)
 		(uuid "03733cdd-94aa-47a0-80d7-0ddc638941ee")
 	)
-	(label "ControlAF_2A"
-		(at 254 138.43 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "065d7b34-874f-4f67-a039-8476b9d86252")
-	)
 	(label "-5VD"
 		(at 271.78 54.61 0)
 		(fields_autoplaced yes)
@@ -7149,6 +7138,17 @@
 			(justify left bottom)
 		)
 		(uuid "0986c5c8-83c7-4c66-b761-85f3a382e122")
+	)
+	(label "ControlAF_3B"
+		(at 266.7 151.13 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "09a13fd3-cf28-47e4-95eb-764aa4280f1e")
 	)
 	(label "Control1"
 		(at 27.94 161.29 0)
@@ -7194,17 +7194,6 @@
 		)
 		(uuid "11ed9d34-f02d-46ba-8084-b324922e5e02")
 	)
-	(label "Control7"
-		(at 254 118.11 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "12fabe9d-0feb-4628-9e3d-756aa4fa8736")
-	)
 	(label "S1out"
 		(at 132.08 34.29 180)
 		(fields_autoplaced yes)
@@ -7215,17 +7204,6 @@
 			(justify right bottom)
 		)
 		(uuid "1676d668-9ba7-473c-8bb7-0a3b47e29ab5")
-	)
-	(label "Control10A"
-		(at 254 133.35 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1694a2f6-cc1b-41cf-b33f-c459d1cb044d")
 	)
 	(label "S9inA"
 		(at 146.05 69.85 0)
@@ -7260,16 +7238,16 @@
 		)
 		(uuid "1986ca49-e7ea-489a-994e-da5b9dfb736c")
 	)
-	(label "CLK"
-		(at 266.7 143.51 0)
+	(label "DAC_CSbar"
+		(at 254 118.11 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "1acd318c-3df3-440b-a0f9-374a77e0e9de")
+		(uuid "2093d3af-9518-43e1-aa24-13d7a42b21fd")
 	)
 	(label "PowerGND"
 		(at 236.22 38.1 180)
@@ -7359,6 +7337,17 @@
 		)
 		(uuid "34cd0b69-aedb-40ef-8c26-0bda838e97df")
 	)
+	(label "Control9A"
+		(at 254 130.81 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "37540fc2-1438-43a1-9c72-eec0a9a78edd")
+	)
 	(label "Driver_FB"
 		(at 87.63 29.21 0)
 		(fields_autoplaced yes)
@@ -7369,6 +7358,17 @@
 			(justify left bottom)
 		)
 		(uuid "386b0df0-ec54-49dc-9c38-ad6c3799b39d")
+	)
+	(label "ControlAF_1A"
+		(at 254 146.05 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3ba83593-cca6-484b-a410-bcacb1fe0f8e")
 	)
 	(label "+15V"
 		(at 247.65 77.47 180)
@@ -7391,6 +7391,28 @@
 			(justify left bottom)
 		)
 		(uuid "3f88360f-072b-420b-bc97-b54c3bd9d8dd")
+	)
+	(label "Control1"
+		(at 254 128.27 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "428b5fd4-a253-4d60-97ce-9b2ff5c3c055")
+	)
+	(label "Control9B"
+		(at 254 135.89 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4348adbf-f0f2-4d76-ae8a-1dc0d2f69924")
 	)
 	(label "S9out"
 		(at 118.11 157.48 180)
@@ -7425,17 +7447,6 @@
 		)
 		(uuid "4550d039-702d-403a-9aff-c3b83ae4bf55")
 	)
-	(label "ControlAF_3A"
-		(at 254 146.05 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "479c1654-e833-4c86-86f2-a069a6fbacb2")
-	)
 	(label "Hz2"
 		(at 133.35 157.48 0)
 		(fields_autoplaced yes)
@@ -7457,6 +7468,39 @@
 			(justify left bottom)
 		)
 		(uuid "49b59b17-b2dc-44e8-b15a-11ad33f86313")
+	)
+	(label "ControlAF_3A"
+		(at 254 151.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4a41a480-f93b-41e0-a1e2-2ec0803692c8")
+	)
+	(label "CLK"
+		(at 266.7 138.43 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4e08f239-c7be-4f24-baf0-3c47b7f06d66")
+	)
+	(label "Control8"
+		(at 254 125.73 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4fd7f504-c789-4a93-8659-d146e6a04124")
 	)
 	(label "S3out"
 		(at 35.56 135.89 0)
@@ -7491,8 +7535,8 @@
 		)
 		(uuid "5176e7dc-796f-4c79-93d0-83e5182c0d07")
 	)
-	(label "Control9B"
-		(at 254 130.81 180)
+	(label "Control10A"
+		(at 254 138.43 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7500,7 +7544,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "54b2bbf8-1d92-460e-a878-eb66fc45e052")
+		(uuid "540fb58c-cd4a-4da2-8e48-0d2824991a55")
 	)
 	(label "S2in"
 		(at 20.32 138.43 180)
@@ -7513,6 +7557,17 @@
 		)
 		(uuid "56a160e5-66e0-4f8a-bc70-b792de3f5b3a")
 	)
+	(label "ADC_CSbar"
+		(at 266.7 143.51 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "590b92c6-2cca-4572-80d4-eeb411a81e42")
+	)
 	(label "S10inA"
 		(at 146.05 72.39 0)
 		(fields_autoplaced yes)
@@ -7523,17 +7578,6 @@
 			(justify left bottom)
 		)
 		(uuid "605831da-03ac-480a-89d4-da5fec955594")
-	)
-	(label "DAC_CSbar"
-		(at 266.7 120.65 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "64032423-1315-442e-bb5e-9ede684a3c87")
 	)
 	(label "-5V"
 		(at 247.65 85.09 180)
@@ -7567,17 +7611,6 @@
 			(justify left bottom)
 		)
 		(uuid "664d5f9c-6d96-4f01-bc87-e30d64badaa7")
-	)
-	(label "Dout"
-		(at 266.7 146.05 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "699b2cb8-1e1f-4a2a-9cfe-7b9cc3f75c45")
 	)
 	(label "S2out"
 		(at 35.56 138.43 0)
@@ -7678,6 +7711,17 @@
 		)
 		(uuid "7142a779-b1cf-48c5-8bb3-37e3ace4754c")
 	)
+	(label "ControlAF_4A"
+		(at 266.7 148.59 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "74bff917-cde3-40ec-ae4f-5506e350691a")
+	)
 	(label "S10inA"
 		(at 50.8 152.4 180)
 		(fields_autoplaced yes)
@@ -7700,8 +7744,8 @@
 		)
 		(uuid "76908f50-e6ff-468b-bda9-2da81e755efb")
 	)
-	(label "ControlAF_1B"
-		(at 254 135.89 180)
+	(label "Control10B"
+		(at 254 133.35 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7709,7 +7753,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "7d881fb8-0cae-4e53-95ad-13ed63c9eb3b")
+		(uuid "7f7e87dc-7d7c-4ca4-b7ba-8cb3b73f4e5e")
 	)
 	(label "Din"
 		(at 66.04 82.55 0)
@@ -7733,17 +7777,6 @@
 		)
 		(uuid "810cb153-6bc2-4581-9377-f9d2dc41aad0")
 	)
-	(label "Control10B"
-		(at 254 128.27 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8166b776-6e23-4d0c-bad7-bc53adc25339")
-	)
 	(label "S6in"
 		(at 116.84 46.99 0)
 		(fields_autoplaced yes)
@@ -7765,6 +7798,17 @@
 			(justify right bottom)
 		)
 		(uuid "82acd061-6093-4ba4-8c1a-3f42e908a49b")
+	)
+	(label "SDI"
+		(at 266.7 120.65 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "83dad73b-4bc1-46fe-9ad3-06d0e469ae98")
 	)
 	(label "SCK"
 		(at 29.21 41.91 180)
@@ -7854,6 +7898,17 @@
 		)
 		(uuid "90561622-b162-4f0f-9ac4-d674384d23f1")
 	)
+	(label "LDACbar"
+		(at 254 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "911fe826-2db2-4996-ac34-617e40158bd0")
+	)
 	(label "-5VD"
 		(at 143.51 170.18 180)
 		(fields_autoplaced yes)
@@ -7865,8 +7920,19 @@
 		)
 		(uuid "92fe9704-a0bf-490f-82fd-a41195cca51c")
 	)
-	(label "ControlAF_2B"
-		(at 254 143.51 180)
+	(label "SCK"
+		(at 266.7 118.11 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "96dc4549-fcc0-4258-9816-2f0773281948")
+	)
+	(label "ControlAF_4B"
+		(at 254 153.67 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7874,7 +7940,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "94023a9d-30a6-4a14-90e2-485e0e455189")
+		(uuid "97abbbdc-2693-489e-b6ae-4a57b0b6c121")
 	)
 	(label "S8out"
 		(at 21.59 81.28 180)
@@ -7886,17 +7952,6 @@
 			(justify right bottom)
 		)
 		(uuid "986e975b-78f6-49a9-be87-78e73da268f4")
-	)
-	(label "SCK"
-		(at 266.7 123.19 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "98faf269-2ac4-4fc8-a452-6f2d6f2efffc")
 	)
 	(label "Vt2"
 		(at 116.84 186.69 0)
@@ -7964,17 +8019,6 @@
 		)
 		(uuid "a705b4bc-ab7e-4b6f-8be9-44dd1bd138ce")
 	)
-	(label "LDACbar"
-		(at 266.7 118.11 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a7286fe6-acb8-41ef-ac68-131f4a6eed2c")
-	)
 	(label "Control10A"
 		(at 58.42 157.48 0)
 		(fields_autoplaced yes)
@@ -7996,17 +8040,6 @@
 			(justify left bottom)
 		)
 		(uuid "a965412f-ccdc-4185-b441-62213886447f")
-	)
-	(label "ControlAF_4A"
-		(at 254 153.67 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a9ffc0b9-e81b-4426-bbe0-56e4a6a9966a")
 	)
 	(label "+5V"
 		(at 260.35 80.01 0)
@@ -8074,6 +8107,17 @@
 		)
 		(uuid "b0763cdc-672b-4c91-a94e-fab182e6ffc6")
 	)
+	(label "ControlAF_2B"
+		(at 254 148.59 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b3062d0a-ea0b-4523-8549-aa24d95c4686")
+	)
 	(label "Vt2"
 		(at 116.84 175.26 0)
 		(fields_autoplaced yes)
@@ -8128,17 +8172,6 @@
 			(justify left bottom)
 		)
 		(uuid "b8e8d563-2a82-4027-a29f-55a1c86ff047")
-	)
-	(label "ControlAF_1A"
-		(at 254 140.97 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b954b06f-4cc8-4408-b15f-9dced3bb38c9")
 	)
 	(label "S3out"
 		(at 132.08 39.37 180)
@@ -8206,17 +8239,6 @@
 		)
 		(uuid "bc2c91ef-a270-41f0-aee9-5bce0440c210")
 	)
-	(label "Din"
-		(at 266.7 151.13 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "be124a64-a78d-408c-a275-3e5feb1a34b8")
-	)
 	(label "-5V"
 		(at 260.35 85.09 0)
 		(fields_autoplaced yes)
@@ -8238,17 +8260,6 @@
 			(justify left bottom)
 		)
 		(uuid "c3a892bd-0bbc-47d1-9bc1-fb930a27fc52")
-	)
-	(label "SDI"
-		(at 266.7 125.73 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c58f7e8d-93aa-4796-9aed-497fd05614ee")
 	)
 	(label "-5VD"
 		(at 76.2 154.94 180)
@@ -8371,27 +8382,16 @@
 		)
 		(uuid "d6c0458d-d15f-4ed9-8cf1-78007f21c6f3")
 	)
-	(label "ControlAF_3B"
-		(at 254 151.13 180)
+	(label "Dout"
+		(at 266.7 140.97 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "d8708738-66d5-4e9f-b4eb-e9ce2953b49c")
-	)
-	(label "Control8"
-		(at 254 120.65 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d90db976-6003-48b6-aeaf-92604b87eea0")
+		(uuid "d81eff14-8c58-4024-a491-6d8b593376df")
 	)
 	(label "ADC_CSbar"
 		(at 66.04 85.09 0)
@@ -8459,17 +8459,6 @@
 		)
 		(uuid "e55fe3d6-2713-4dd4-a4a3-e067565e96e3")
 	)
-	(label "ControlAF_4B"
-		(at 254 148.59 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e66a7011-fb4a-4875-9ecd-12c8cf9878ee")
-	)
 	(label "S4in"
 		(at 116.84 41.91 0)
 		(fields_autoplaced yes)
@@ -8492,16 +8481,16 @@
 		)
 		(uuid "e7259058-8df6-4aba-8e31-5570e0664638")
 	)
-	(label "ADC_CSbar"
-		(at 266.7 148.59 0)
+	(label "ControlAF_2A"
+		(at 254 143.51 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "e88c7c9a-47d0-41e0-abb8-6721daea0ced")
+		(uuid "e8c31848-9bb4-4289-b0b8-36503c2583ca")
 	)
 	(label "ControlAF_3B"
 		(at 82.55 191.77 0)
@@ -8525,6 +8514,17 @@
 		)
 		(uuid "ea3edb0b-f960-43f8-8e0a-90f8ef30d526")
 	)
+	(label "Control7"
+		(at 254 123.19 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ea509192-4eac-437e-a25e-b88752fcea70")
+	)
 	(label "+5V"
 		(at 247.65 80.01 180)
 		(fields_autoplaced yes)
@@ -8536,16 +8536,16 @@
 		)
 		(uuid "eb28a701-b06d-4d51-8ee6-41cd781d8fb2")
 	)
-	(label "Control9A"
-		(at 254 125.73 180)
+	(label "Din"
+		(at 266.7 146.05 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "ed89ae4e-41c1-4ed6-ad1f-633083c37608")
+		(uuid "ed5b848f-2ea0-442b-a1f0-38b55ca3b1e7")
 	)
 	(label "-15V"
 		(at 177.8 153.67 180)
@@ -8579,17 +8579,6 @@
 			(justify right bottom)
 		)
 		(uuid "f153ba2e-ff85-4202-a7a2-c0c1b42493d5")
-	)
-	(label "Control1"
-		(at 254 123.19 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f262d635-e7c6-4df6-b556-32cbe02b3cf6")
 	)
 	(label "S9inA"
 		(at 50.8 129.54 180)
@@ -8656,6 +8645,17 @@
 			(justify left bottom)
 		)
 		(uuid "f74ea334-cf62-4bff-8a59-fb6b80a7624e")
+	)
+	(label "ControlAF_1B"
+		(at 254 140.97 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "faec352b-16c2-4e06-ae93-e745b3622215")
 	)
 	(label "-15V"
 		(at 247.65 87.63 180)
