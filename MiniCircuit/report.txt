@@ -1,0 +1,5 @@
+Plotted to 'C:\Users\harsh\Desktop\IIT Bombay\Semester 6\EE 344\Main Work\EDL2024\MiniCircuit\MiniCircuit-F_Cu.gbr'.
+Plotted to 'C:\Users\harsh\Desktop\IIT Bombay\Semester 6\EE 344\Main Work\EDL2024\MiniCircuit\MiniCircuit-B_Cu.gbr'.
+Plotted to 'C:\Users\harsh\Desktop\IIT Bombay\Semester 6\EE 344\Main Work\EDL2024\MiniCircuit\MiniCircuit-Edge_Cuts.gbr'.
+Created Gerber job file 'C:\Users\harsh\Desktop\IIT Bombay\Semester 6\EE 344\Main Work\EDL2024\MiniCircuit\MiniCircuit-job.gbrjob'.
+Info: Done.
