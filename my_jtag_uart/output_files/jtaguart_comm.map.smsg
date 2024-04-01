@@ -1,0 +1,1 @@
+Warning (10236): Verilog HDL Implicit Net warning at jtaguart_comm.v(124): created implicit net for "jtag_uart_waitrequest" File: D:/jtag uart/my_jtag_uart/jtaguart_comm.v Line: 124

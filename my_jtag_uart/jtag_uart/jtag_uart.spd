@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/jtag_uart_ju.v"
+   type="VERILOG"
+   library="ju" />
+ <file path="simulation/jtag_uart.v" type="VERILOG" />
+ <topLevel name="jtag_uart" />
+ <deviceFamily name="max10" />
+</simPackage>

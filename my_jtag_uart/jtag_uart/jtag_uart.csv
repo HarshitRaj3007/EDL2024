@@ -1,0 +1,18 @@
+# system info jtag_uart on 2024.03.20.14:58:02
+system_info:
+name,value
+DEVICE,10M25SAE144C8G
+DEVICE_FAMILY,MAX 10
+GENERATION_ID,1710926881
+#
+#
+# Files generated for jtag_uart on 2024.03.20.14:58:02
+files:
+filepath,kind,attributes,module,is_top
+simulation/jtag_uart.v,VERILOG,,jtag_uart,true
+simulation/submodules/jtag_uart_ju.v,VERILOG,,jtag_uart_ju,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+jtag_uart.ju,jtag_uart_ju

@@ -1,0 +1,117 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do EDC_edl_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/quartusprojects/EDL/EDC_edl.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:42:35 on Mar 04,2024
+# vcom -reportprogress 300 -93 -work work D:/quartusprojects/EDL/EDC_edl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity EDC_edl
+# -- Compiling architecture behave of EDC_edl
+# End time: 16:42:36 on Mar 04,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vsim work.edc_edl
+# vsim work.edc_edl 
+# Start time: 16:42:41 on Mar 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.edc_edl(behave)
+add wave -position insertpoint  \
+sim:/edc_edl/clk_50MHz \
+sim:/edc_edl/reset \
+sim:/edc_edl/Din \
+sim:/edc_edl/Dout \
+sim:/edc_edl/CS \
+sim:/edc_edl/Sclk \
+sim:/edc_edl/output \
+sim:/edc_edl/clk_int \
+sim:/edc_edl/op_valid \
+sim:/edc_edl/count \
+sim:/edc_edl/op_bit \
+sim:/edc_edl/counter \
+sim:/edc_edl/rx_buf \
+sim:/edc_edl/rx_buf_copy \
+sim:/edc_edl/starter \
+sim:/edc_edl/sigma_counter \
+sim:/edc_edl/flag \
+sim:/edc_edl/display_counter
+force -freeze sim:/edc_edl/clk_50MHz 1 0, 0 {10000 ps} -r 20000
+force -freeze sim:/edc_edl/Dout 1 0
+force -freeze sim:/edc_edl/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/edc_edl/Dout 0 0
+run
+run
+run
+force -freeze sim:/edc_edl/Dout 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/edc_edl/Dout 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 18:00:49 on Mar 04,2024, Elapsed time: 1:18:08
+# Errors: 0, Warnings: 0
