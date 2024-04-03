@@ -72,7 +72,7 @@
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(pcbplotparams
-			(layerselection 0x0001000_ffffffff)
+			(layerselection 0x00010f0_ffffffff)
 			(plot_on_all_layers_selection 0x0000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
@@ -106,7 +106,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "C:/Users/harsh/Desktop/IIT Bombay/Semester 6/EE 344/Main Work/EDL2024/FinalCircuit/")
 		)
 	)
 	(net 0 "")
@@ -16145,6 +16145,72 @@
 			)
 			(justify left bottom)
 		)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "4c896b39-395e-4886-b3ea-6c2628e3cdeb")
+		(pts
+			(xy 256.222 30.536) (xy 256.222 115.776)
+		)
+		(height -3.578)
+		(gr_text "85.2400 mm"
+			(at 258.65 73.156 90)
+			(layer "Dwgs.User")
+			(uuid "4c896b39-395e-4886-b3ea-6c2628e3cdeb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "aaf49c2b-0d40-4e40-ab8e-fea1d228aa0a")
+		(pts
+			(xy 88.9 115.776) (xy 256.222 115.776)
+		)
+		(height 4.224)
+		(gr_text "167.3220 mm"
+			(at 172.561 118.85 0)
+			(layer "Dwgs.User")
+			(uuid "aaf49c2b-0d40-4e40-ab8e-fea1d228aa0a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
 	)
 	(via
 		(at 103 90)

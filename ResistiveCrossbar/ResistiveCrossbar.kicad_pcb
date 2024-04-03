@@ -72,7 +72,7 @@
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(pcbplotparams
-			(layerselection 0x00010fc_ffffffff)
+			(layerselection 0x0000020_7ffffffe)
 			(plot_on_all_layers_selection 0x0000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
@@ -104,9 +104,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "C:/Users/harsh/Desktop/IIT Bombay/Semester 6/EE 344/Main Work/EDL2024/ResistiveCrossbar/")
 		)
 	)
 	(net 0 "")
@@ -2247,6 +2247,7 @@
 		(property "Reference" "J1"
 			(at 0 3 90)
 			(layer "B.SilkS")
+			(hide yes)
 			(uuid "94f587dc-5e47-4a0b-b082-0e259bfbbf04")
 			(effects
 				(font
@@ -2575,6 +2576,71 @@
 		(layer "Edge.Cuts")
 		(uuid "17bb0188-f373-4074-b26a-f572c98b9ffd")
 	)
+	(gr_text "V1"
+		(at 139 48 90)
+		(layer "F.SilkS")
+		(uuid "7f712a25-5259-44a3-b2ce-3abb0d605fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "H2"
+		(at 131.4 48 90)
+		(layer "F.SilkS")
+		(uuid "853120d4-d173-4ce4-9afe-3584ff800b20")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "V3"
+		(at 136.6 48 90)
+		(layer "F.SilkS")
+		(uuid "8af0ca00-90fc-4dd3-902b-3eb6a5fea68d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "H1"
+		(at 128.8 48 90)
+		(layer "F.SilkS")
+		(uuid "9369acf2-2b15-43d6-bc2f-3534ce15a097")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "V2"
+		(at 141.6 48 90)
+		(layer "F.SilkS")
+		(uuid "a9aab803-e66f-4a75-910a-ca47386202dc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "3X3\nResistive\nCrossbar\n(MON-08)"
 		(at 147 72 0)
 		(layer "F.SilkS")
@@ -2586,6 +2652,98 @@
 			)
 			(justify left bottom)
 		)
+	)
+	(gr_text "GND"
+		(at 126.4 49.2 90)
+		(layer "F.SilkS")
+		(uuid "dd7b2eee-dea2-4550-b962-77cadbc75db2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "H3"
+		(at 134 48 90)
+		(layer "F.SilkS")
+		(uuid "ff0baaf7-b871-4a00-a221-610b8f82a62b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "0c63204d-c3aa-462e-80c6-b8fa5447642b")
+		(pts
+			(xy 114.75 81.25) (xy 157 81.25)
+		)
+		(height 3.15)
+		(gr_text "42.2500 mm"
+			(at 135.875 83.25 0)
+			(layer "Dwgs.User")
+			(uuid "0c63204d-c3aa-462e-80c6-b8fa5447642b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "9cb3be42-019c-4abd-abed-f8529d46afbb")
+		(pts
+			(xy 157 38) (xy 157 81.25)
+		)
+		(height -2.8)
+		(gr_text "43.2500 mm"
+			(at 158.65 59.625 90)
+			(layer "Dwgs.User")
+			(uuid "9cb3be42-019c-4abd-abed-f8529d46afbb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
 	)
 	(via
 		(at 144 65.55)
