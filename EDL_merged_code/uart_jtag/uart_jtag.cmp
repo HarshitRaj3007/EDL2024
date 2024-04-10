@@ -1,0 +1,15 @@
+	component uart_jtag is
+		port (
+			avalon_jtag_slave_chipselect  : in  std_logic                     := 'X';             -- chipselect
+			avalon_jtag_slave_address     : in  std_logic                     := 'X';             -- address
+			avalon_jtag_slave_read_n      : in  std_logic                     := 'X';             -- read_n
+			avalon_jtag_slave_readdata    : out std_logic_vector(31 downto 0);                    -- readdata
+			avalon_jtag_slave_write_n     : in  std_logic                     := 'X';             -- write_n
+			avalon_jtag_slave_writedata   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			avalon_jtag_slave_waitrequest : out std_logic;                                        -- waitrequest
+			clk_clk                       : in  std_logic                     := 'X';             -- clk
+			irq_irq                       : out std_logic;                                        -- irq
+			reset_reset_n                 : in  std_logic                     := 'X'              -- reset_n
+		);
+	end component uart_jtag;
+

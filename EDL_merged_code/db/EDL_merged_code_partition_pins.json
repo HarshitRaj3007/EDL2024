@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SCK_DAC",
+					"strict" : false
+				},
+				{
+					"name" : "CS_DAC",
+					"strict" : false
+				},
+				{
+					"name" : "SDI_DAC",
+					"strict" : false
+				},
+				{
+					"name" : "LDAC_DAC",
+					"strict" : false
+				},
+				{
+					"name" : "Din_ADC",
+					"strict" : false
+				},
+				{
+					"name" : "CS_ADC",
+					"strict" : false
+				},
+				{
+					"name" : "Sclk_ADC",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "Dout_ADC",
+					"strict" : false
+				},
+				{
+					"name" : "ch_display_select",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
