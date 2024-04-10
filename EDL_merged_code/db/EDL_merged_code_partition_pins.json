@@ -72,10 +72,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "ch_display_select",
-					"strict" : false
-				},
-				{
 					"name" : "altera_reserved_tms",
 					"strict" : false
 				},

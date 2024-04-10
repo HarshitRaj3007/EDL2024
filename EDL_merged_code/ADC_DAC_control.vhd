@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.all;
 use ieee.std_logic_unsigned.all;
 
 package array_definer is
-type value_array is array (23 DOWNTO 0) of STD_LOGIC_VECTOR(9 DOWNTO 0);
+type value_array is array (127 DOWNTO 0) of STD_LOGIC_VECTOR(9 DOWNTO 0);
 end package array_definer;
 
 use work.array_definer.all;
@@ -31,6 +31,7 @@ entity adc_dac_control is
 		Sclk_ADC 		: out std_logic;
 		output_ADC	: out std_logic_vector(9 downto 0);
 		ch_display_select : in std_logic;
+		start_sampling : in std_logic;
 		measured_values: out value_array
 	); 
 end adc_dac_control;
@@ -55,11 +56,11 @@ signal rx_buf_ADC	: std_logic_vector (9 downto 0):= b"0000000000";
 signal counter_sec_ADC: integer :=0;
 
 --type value_array is array (23 DOWNTO 0) of STD_LOGIC_VECTOR(9 DOWNTO 0);
-signal values: value_array := (b"0001101010",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000",b"0000000000");
+signal values: value_array; 
 signal values_counter: integer := 0;
-signal sampling_ADC_value : integer := 2500; 		--2500*20ns = 50us
+signal sampling_ADC_value : integer := 25000; 		--2500*20ns = 50us
 signal sampling_counter_ADC : integer := 0; 		
-
+signal sampling_is_go : std_logic := '0';
 
 --control signals
 signal sample_now: std_logic_vector(1 downto 0) := b"11";				--11 means don't sample. 00 is for CH0, 01 is for CH1 reading	
@@ -94,7 +95,13 @@ begin
 		end if;
 	end  process;
 	
-	
+	trigger_to_start_sampling: process(start_sampling)
+	begin
+		if(start_sampling'event and start_sampling = '1') then
+			sampling_is_go <= '1';
+		end if;
+	end  process;
+		
 	
 	ADC_values_storing_proc: process(clk_50Mhz)
 	begin
@@ -135,6 +142,8 @@ begin
 					sample_now <= b"11";
 				end if;
 			 end if;
+			 
+			 sample_now <= b"01";
 
 		end if;
 	end process;
