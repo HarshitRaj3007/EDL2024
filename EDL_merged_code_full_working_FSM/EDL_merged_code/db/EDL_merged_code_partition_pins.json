@@ -68,10 +68,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "ch_display_select",
-					"strict" : false
-				},
-				{
 					"name" : "Dout_ADC",
 					"strict" : false
 				},

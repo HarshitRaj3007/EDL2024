@@ -138,6 +138,7 @@ measurement_display_proc_2: process(clk_50Mhz)
 			else
 				output_ADC <= CH0_measured_ADC;
 			end if;
+				output_ADC <= CH1_measured_ADC;
 		end if;
 	end process;
 --	output_ADC <= b"1010000011";

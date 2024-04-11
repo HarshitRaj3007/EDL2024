@@ -96,4 +96,8 @@ set_location_assignment PIN_A2 -to Control_Hz2A
 set_location_assignment PIN_A8 -to in_read
 set_location_assignment PIN_A7 -to Control_Hz2B
 set_location_assignment PIN_C8 -to Control_Hz1A
+set_location_assignment PIN_C9 -to CS_ADC
+set_location_assignment PIN_F9 -to Din_ADC
+set_location_assignment PIN_E8 -to Dout_ADC
+set_location_assignment PIN_E7 -to Sclk_ADC
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

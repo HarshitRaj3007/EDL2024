@@ -1,5 +1,5 @@
 Fitter report for EDL_merged_code
-Thu Apr 11 22:39:22 2024
+Fri Apr 12 00:19:29 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -68,17 +68,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Apr 11 22:39:22 2024       ;
+; Fitter Status                      ; Successful - Fri Apr 12 00:19:29 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; EDL_merged_code                             ;
 ; Top-level Entity Name              ; EDL_merged_code                             ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,323 / 22,320 ( 10 % )                     ;
-;     Total combinational functions  ; 2,253 / 22,320 ( 10 % )                     ;
-;     Dedicated logic registers      ; 459 / 22,320 ( 2 % )                        ;
-; Total registers                    ; 459                                         ;
+; Total logic elements               ; 2,311 / 22,320 ( 10 % )                     ;
+;     Total combinational functions  ; 2,243 / 22,320 ( 10 % )                     ;
+;     Dedicated logic registers      ; 449 / 22,320 ( 2 % )                        ;
+; Total registers                    ; 449                                         ;
 ; Total pins                         ; 49 / 154 ( 32 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 960 / 608,256 ( < 1 % )                     ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   2.2%      ;
-;     Processor 3            ;   2.1%      ;
+;     Processor 3            ;   2.2%      ;
 ;     Processor 4            ;   2.1%      ;
 ;     Processor 5            ;   2.1%      ;
 ;     Processor 6            ;   2.1%      ;
@@ -193,8 +193,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 2858 ) ; 0.00 % ( 0 / 2858 )        ; 0.00 % ( 0 / 2858 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 2858 ) ; 0.00 % ( 0 / 2858 )        ; 0.00 % ( 0 / 2858 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 2838 ) ; 0.00 % ( 0 / 2838 )        ; 0.00 % ( 0 / 2838 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 2838 ) ; 0.00 % ( 0 / 2838 )        ; 0.00 % ( 0 / 2838 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -218,7 +218,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 2654 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 2634 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; sld_hub:auto_hub               ; 0.00 % ( 0 / 194 )    ; N/A                     ; Post-Synthesis    ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
@@ -235,26 +235,26 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Total logic elements                        ; 2,323 / 22,320 ( 10 % )  ;
-;     -- Combinational with no register       ; 1864                     ;
-;     -- Register only                        ; 70                       ;
-;     -- Combinational with a register        ; 389                      ;
+; Total logic elements                        ; 2,311 / 22,320 ( 10 % )  ;
+;     -- Combinational with no register       ; 1862                     ;
+;     -- Register only                        ; 68                       ;
+;     -- Combinational with a register        ; 381                      ;
 ;                                             ;                          ;
 ; Logic element usage by number of LUT inputs ;                          ;
 ;     -- 4 input functions                    ; 736                      ;
-;     -- 3 input functions                    ; 620                      ;
-;     -- <=2 input functions                  ; 897                      ;
-;     -- Register only                        ; 70                       ;
+;     -- 3 input functions                    ; 609                      ;
+;     -- <=2 input functions                  ; 898                      ;
+;     -- Register only                        ; 68                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 1475                     ;
+;     -- normal mode                          ; 1465                     ;
 ;     -- arithmetic mode                      ; 778                      ;
 ;                                             ;                          ;
-; Total registers*                            ; 459 / 23,018 ( 2 % )     ;
-;     -- Dedicated logic registers            ; 459 / 22,320 ( 2 % )     ;
+; Total registers*                            ; 449 / 23,018 ( 2 % )     ;
+;     -- Dedicated logic registers            ; 449 / 22,320 ( 2 % )     ;
 ;     -- I/O registers                        ; 0 / 698 ( 0 % )          ;
 ;                                             ;                          ;
-; Total LABs:  partially or completely used   ; 184 / 1,395 ( 13 % )     ;
+; Total LABs:  partially or completely used   ; 182 / 1,395 ( 13 % )     ;
 ; Virtual pins                                ; 0                        ;
 ; I/O pins                                    ; 49 / 154 ( 32 % )        ;
 ;     -- Clock pins                           ; 2 / 7 ( 29 % )           ;
@@ -272,12 +272,12 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )            ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )            ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )            ;
-; Average interconnect usage (total/H/V)      ; 2.6% / 2.4% / 2.9%       ;
-; Peak interconnect usage (total/H/V)         ; 18.0% / 15.6% / 21.3%    ;
+; Average interconnect usage (total/H/V)      ; 2.5% / 2.3% / 2.9%       ;
+; Peak interconnect usage (total/H/V)         ; 15.1% / 14.4% / 16.2%    ;
 ; Maximum fan-out                             ; 192                      ;
 ; Highest non-global fan-out                  ; 127                      ;
-; Total fan-out                               ; 8063                     ;
-; Average fan-out                             ; 2.79                     ;
+; Total fan-out                               ; 7993                     ;
+; Average fan-out                             ; 2.80                     ;
 +---------------------------------------------+--------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -290,23 +290,23 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 +---------------------------------------------+-----------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                   ; Low                            ;
 ;                                             ;                       ;                       ;                                ;
-; Total logic elements                        ; 2190 / 22320 ( 10 % ) ; 133 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
-;     -- Combinational with no register       ; 1806                  ; 58                    ; 0                              ;
-;     -- Register only                        ; 56                    ; 14                    ; 0                              ;
-;     -- Combinational with a register        ; 328                   ; 61                    ; 0                              ;
+; Total logic elements                        ; 2178 / 22320 ( 10 % ) ; 133 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
+;     -- Combinational with no register       ; 1804                  ; 58                    ; 0                              ;
+;     -- Register only                        ; 54                    ; 14                    ; 0                              ;
+;     -- Combinational with a register        ; 320                   ; 61                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                       ;                                ;
 ;     -- 4 input functions                    ; 680                   ; 56                    ; 0                              ;
-;     -- 3 input functions                    ; 593                   ; 27                    ; 0                              ;
-;     -- <=2 input functions                  ; 861                   ; 36                    ; 0                              ;
-;     -- Register only                        ; 56                    ; 14                    ; 0                              ;
+;     -- 3 input functions                    ; 582                   ; 27                    ; 0                              ;
+;     -- <=2 input functions                  ; 862                   ; 36                    ; 0                              ;
+;     -- Register only                        ; 54                    ; 14                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                       ;                                ;
-;     -- normal mode                          ; 1364                  ; 111                   ; 0                              ;
+;     -- normal mode                          ; 1354                  ; 111                   ; 0                              ;
 ;     -- arithmetic mode                      ; 770                   ; 8                     ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
-; Total registers                             ; 384                   ; 75                    ; 0                              ;
-;     -- Dedicated logic registers            ; 384 / 22320 ( 2 % )   ; 75 / 22320 ( < 1 % )  ; 0 / 22320 ( 0 % )              ;
+; Total registers                             ; 374                   ; 75                    ; 0                              ;
+;     -- Dedicated logic registers            ; 374 / 22320 ( 2 % )   ; 75 / 22320 ( < 1 % )  ; 0 / 22320 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                     ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Total LABs:  partially or completely used   ; 171 / 1395 ( 12 % )   ; 14 / 1395 ( 1 % )     ; 0 / 1395 ( 0 % )               ;
@@ -322,13 +322,13 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ;                                             ;                       ;                       ;                                ;
 ; Connections                                 ;                       ;                       ;                                ;
 ;     -- Input Connections                    ; 119                   ; 109                   ; 0                              ;
-;     -- Registered Input Connections         ; 79                    ; 85                    ; 0                              ;
+;     -- Registered Input Connections         ; 77                    ; 85                    ; 0                              ;
 ;     -- Output Connections                   ; 151                   ; 77                    ; 0                              ;
 ;     -- Registered Output Connections        ; 1                     ; 77                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Internal Connections                        ;                       ;                       ;                                ;
-;     -- Total Connections                    ; 7552                  ; 697                   ; 5                              ;
-;     -- Registered Connections               ; 1217                  ; 485                   ; 0                              ;
+;     -- Total Connections                    ; 7482                  ; 697                   ; 5                              ;
+;     -- Registered Connections               ; 1195                  ; 485                   ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; External Connections                        ;                       ;                       ;                                ;
 ;     -- Top                                  ; 86                    ; 184                   ; 0                              ;
@@ -361,8 +361,8 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 +-------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name              ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; Dout_ADC          ; E7    ; 8        ; 16           ; 34           ; 14           ; 10                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; ch_display_select ; B8    ; 8        ; 25           ; 34           ; 21           ; 10                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Dout_ADC          ; E8    ; 8        ; 20           ; 34           ; 7            ; 10                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; ch_display_select ; P3    ; 3        ; 1            ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; clk               ; R8    ; 3        ; 27           ; 0            ; 21           ; 192                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; in_read           ; A8    ; 8        ; 25           ; 34           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +-------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
@@ -373,7 +373,7 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 +-----------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name                  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-----------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; CS_ADC                ; E8    ; 8        ; 20           ; 34           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; CS_ADC                ; C9    ; 7        ; 31           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; CS_DAC                ; B7    ; 8        ; 18           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; Control1              ; F8    ; 8        ; 20           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; Control10A            ; D5    ; 8        ; 5            ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
@@ -399,8 +399,8 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; Control_Vt2B          ; B12   ; 7        ; 43           ; 34           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; Control_Vt3A          ; B5    ; 8        ; 11           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; Control_Vt3B          ; A6    ; 8        ; 16           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; Din_ADC               ; C9    ; 7        ; 31           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HIGH                  ; R3    ; 3        ; 1            ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Din_ADC               ; F9    ; 7        ; 34           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; HIGH                  ; T6    ; 3        ; 14           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; LDAC_DAC              ; A4    ; 8        ; 9            ; 34           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LED[0]                ; A15   ; 7        ; 38           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LED[1]                ; A13   ; 7        ; 49           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
@@ -410,14 +410,14 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; LED[5]                ; F3    ; 1        ; 0            ; 26           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LED[6]                ; B1    ; 1        ; 0            ; 28           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LED[7]                ; L3    ; 2        ; 0            ; 10           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; LOW                   ; N3    ; 3        ; 1            ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; LOW                   ; R16   ; 5        ; 53           ; 8            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; SCK_DAC               ; B6    ; 8        ; 16           ; 34           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; SDI_DAC               ; A5    ; 8        ; 14           ; 34           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; Sclk_ADC              ; P8    ; 3        ; 25           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Sclk_ADC              ; E7    ; 8        ; 16           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; controlmain_readwrite ; A12   ; 7        ; 43           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; controlmain_reset     ; E9    ; 7        ; 29           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; reset_ADC             ; R6    ; 3        ; 14           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; reset_DAC             ; T7    ; 3        ; 18           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; reset_ADC             ; J13   ; 5        ; 53           ; 16           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; reset_DAC             ; T4    ; 3        ; 5            ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +-----------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -445,17 +445,18 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; F16      ; DIFFIO_R4n, nCEO                         ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
 ; B11      ; DIFFIO_T20p, PADD0                       ; Use as regular IO        ; Control_Vt2A            ; Dual Purpose Pin          ;
 ; A15      ; DIFFIO_T19n, PADD1                       ; Use as regular IO        ; LED[0]                  ; Dual Purpose Pin          ;
-; C9       ; DIFFIO_T15n, PADD7                       ; Use as regular IO        ; Din_ADC                 ; Dual Purpose Pin          ;
+; F9       ; DIFFIO_T17p, PADD4, DQS2T/CQ3T,DPCLK8    ; Use as regular IO        ; Din_ADC                 ; Dual Purpose Pin          ;
+; C9       ; DIFFIO_T15n, PADD7                       ; Use as regular IO        ; CS_ADC                  ; Dual Purpose Pin          ;
 ; D9       ; DIFFIO_T15p, PADD8                       ; Use as regular IO        ; Control7                ; Dual Purpose Pin          ;
 ; E9       ; DIFFIO_T13p, PADD12, DQS4T/CQ5T,DPCLK9   ; Use as regular IO        ; controlmain_reset       ; Dual Purpose Pin          ;
 ; C8       ; DIFFIO_T11p, PADD17, DQS5T/CQ5T#,DPCLK10 ; Use as regular IO        ; Control_Hz1A            ; Dual Purpose Pin          ;
-; E8       ; DIFFIO_T10n, DATA2                       ; Use as regular IO        ; CS_ADC                  ; Dual Purpose Pin          ;
+; E8       ; DIFFIO_T10n, DATA2                       ; Use as regular IO        ; Dout_ADC                ; Dual Purpose Pin          ;
 ; F8       ; DIFFIO_T10p, DATA3                       ; Use as regular IO        ; Control1                ; Dual Purpose Pin          ;
 ; A7       ; DIFFIO_T9n, PADD18                       ; Use as regular IO        ; Control_Hz2B            ; Dual Purpose Pin          ;
 ; B7       ; DIFFIO_T9p, DATA4                        ; Use as regular IO        ; CS_DAC                  ; Dual Purpose Pin          ;
 ; A6       ; DIFFIO_T7n, DATA14, DQS3T/CQ3T#,DPCLK11  ; Use as regular IO        ; Control_Vt3B            ; Dual Purpose Pin          ;
 ; B6       ; DIFFIO_T7p, DATA13                       ; Use as regular IO        ; SCK_DAC                 ; Dual Purpose Pin          ;
-; E7       ; DATA5                                    ; Use as regular IO        ; Dout_ADC                ; Dual Purpose Pin          ;
+; E7       ; DATA5                                    ; Use as regular IO        ; Sclk_ADC                ; Dual Purpose Pin          ;
 ; E6       ; DIFFIO_T6p, DATA6                        ; Use as regular IO        ; Control9A               ; Dual Purpose Pin          ;
 ; A5       ; DIFFIO_T5n, DATA7                        ; Use as regular IO        ; SDI_DAC                 ; Dual Purpose Pin          ;
 ; B5       ; DIFFIO_T5p, DATA8                        ; Use as regular IO        ; Control_Vt3A            ; Dual Purpose Pin          ;
@@ -466,20 +467,20 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 +----------+------------------------------------------+--------------------------+-------------------------+---------------------------+
 
 
-+-------------------------------------------------------------+
-; I/O Bank Usage                                              ;
-+----------+-------------------+---------------+--------------+
-; I/O Bank ; Usage             ; VCCIO Voltage ; VREF Voltage ;
-+----------+-------------------+---------------+--------------+
-; 1        ; 7 / 14 ( 50 % )   ; 2.5V          ; --           ;
-; 2        ; 1 / 16 ( 6 % )    ; 2.5V          ; --           ;
-; 3        ; 6 / 25 ( 24 % )   ; 2.5V          ; --           ;
-; 4        ; 0 / 20 ( 0 % )    ; 2.5V          ; --           ;
-; 5        ; 0 / 18 ( 0 % )    ; 2.5V          ; --           ;
-; 6        ; 1 / 13 ( 8 % )    ; 2.5V          ; --           ;
-; 7        ; 15 / 24 ( 63 % )  ; 2.5V          ; --           ;
-; 8        ; 24 / 24 ( 100 % ) ; 2.5V          ; --           ;
-+----------+-------------------+---------------+--------------+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1        ; 7 / 14 ( 50 % )  ; 2.5V          ; --           ;
+; 2        ; 1 / 16 ( 6 % )   ; 2.5V          ; --           ;
+; 3        ; 4 / 25 ( 16 % )  ; 2.5V          ; --           ;
+; 4        ; 0 / 20 ( 0 % )   ; 2.5V          ; --           ;
+; 5        ; 2 / 18 ( 11 % )  ; 2.5V          ; --           ;
+; 6        ; 1 / 13 ( 8 % )   ; 2.5V          ; --           ;
+; 7        ; 16 / 24 ( 67 % ) ; 2.5V          ; --           ;
+; 8        ; 23 / 24 ( 96 % ) ; 2.5V          ; --           ;
++----------+------------------+---------------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -510,7 +511,7 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; B5       ; 233        ; 8        ; Control_Vt3A                                              ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; B6       ; 226        ; 8        ; SCK_DAC                                                   ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; B7       ; 221        ; 8        ; CS_DAC                                                    ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; B8       ; 212        ; 8        ; ch_display_select                                         ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B8       ; 212        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B9       ; 210        ; 7        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B10      ; 199        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B11      ; 189        ; 7        ; Control_Vt2A                                              ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
@@ -527,7 +528,7 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; C6       ; 224        ; 8        ; Control10B                                                ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; C7       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; C8       ; 215        ; 8        ; Control_Hz1A                                              ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; C9       ; 200        ; 7        ; Din_ADC                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C9       ; 200        ; 7        ; CS_ADC                                                    ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; C10      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; C11      ; 190        ; 7        ; Control8                                                  ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; C12      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -557,8 +558,8 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; E4       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E5       ;            ;          ; GNDA3                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E6       ; 231        ; 8        ; Control9A                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; E7       ; 227        ; 8        ; Dout_ADC                                                  ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; E8       ; 218        ; 8        ; CS_ADC                                                    ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E7       ; 227        ; 8        ; Sclk_ADC                                                  ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
+; E8       ; 218        ; 8        ; Dout_ADC                                                  ; input  ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; E9       ; 205        ; 7        ; controlmain_reset                                         ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; E10      ; 184        ; 7        ; Control5                                                  ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; E11      ; 183        ; 7        ; Control6                                                  ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
@@ -575,7 +576,7 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; F6       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F7       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; F8       ; 219        ; 8        ; Control1                                                  ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; F9       ; 197        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; F9       ; 197        ; 7        ; Din_ADC                                                   ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; F10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F11      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; F12      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -628,7 +629,7 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; J10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J11      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J12      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; J13      ; 146        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J13      ; 146        ; 5        ; reset_ADC                                                 ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J14      ; 144        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J15      ; 143        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J16      ; 142        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -682,7 +683,7 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; M16      ; 148        ; 5        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; N1       ; 44         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N2       ; 43         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; N3       ; 52         ; 3        ; LOW                                                       ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; N3       ; 52         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N4       ;            ;          ; VCCD_PLL1                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N5       ; 62         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N6       ; 63         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -698,12 +699,12 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; N16      ; 132        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P1       ; 51         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P2       ; 50         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; P3       ; 53         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; P3       ; 53         ; 3        ; ch_display_select                                         ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; P4       ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; P5       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; P6       ; 67         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; P7       ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; P8       ; 85         ; 3        ; Sclk_ADC                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; P8       ; 85         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; P9       ; 105        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; P10      ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; P11      ; 106        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -714,10 +715,10 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; P16      ; 128        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R1       ; 49         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; R3       ; 54         ; 3        ; HIGH                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; R3       ; 54         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R4       ; 60         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R5       ; 71         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; R6       ; 73         ; 3        ; reset_ADC                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; R6       ; 73         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R7       ; 76         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R8       ; 86         ; 3        ; clk                                                       ; input  ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; R9       ; 88         ; 4        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -727,14 +728,14 @@ The pin-out file can be found in D:/EDL_merged_code_full_working_FSM/EDL_merged_
 ; R13      ; 107        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R14      ; 120        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R15      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; R16      ; 129        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; R16      ; 129        ; 5        ; LOW                                                       ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T1       ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; T2       ; 59         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T3       ; 55         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; T4       ; 61         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; T4       ; 61         ; 3        ; reset_DAC                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; T5       ; 72         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; T6       ; 74         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; T7       ; 77         ; 3        ; reset_DAC                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; T6       ; 74         ; 3        ; HIGH                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; T7       ; 77         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T8       ; 87         ; 3        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; T9       ; 89         ; 4        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; T10      ; 97         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -773,6 +774,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Din_ADC               ; Incomplete set of assignments ;
 ; CS_ADC                ; Incomplete set of assignments ;
 ; Sclk_ADC              ; Incomplete set of assignments ;
+; ch_display_select     ; Incomplete set of assignments ;
 ; controlmain_reset     ; Incomplete set of assignments ;
 ; controlmain_readwrite ; Incomplete set of assignments ;
 ; Control1              ; Incomplete set of assignments ;
@@ -800,17 +802,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Control_Hz3A          ; Incomplete set of assignments ;
 ; Control_Hz3B          ; Incomplete set of assignments ;
 ; clk                   ; Incomplete set of assignments ;
-; ch_display_select     ; Incomplete set of assignments ;
 ; Dout_ADC              ; Incomplete set of assignments ;
 ; HIGH                  ; Missing location assignment   ;
 ; LOW                   ; Missing location assignment   ;
 ; reset_DAC             ; Missing location assignment   ;
 ; reset_ADC             ; Missing location assignment   ;
-; Din_ADC               ; Missing location assignment   ;
-; CS_ADC                ; Missing location assignment   ;
-; Sclk_ADC              ; Missing location assignment   ;
 ; ch_display_select     ; Missing location assignment   ;
-; Dout_ADC              ; Missing location assignment   ;
 +-----------------------+-------------------------------+
 
 
@@ -819,8 +816,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                         ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |EDL_merged_code                                                                                                                        ; 2323 (89)   ; 459 (69)                  ; 0 (0)         ; 960         ; 2    ; 0            ; 0       ; 0         ; 49   ; 0            ; 1864 (25)    ; 70 (15)           ; 389 (48)         ; |EDL_merged_code                                                                                                                                                                                                                                                                                                                                            ; EDL_merged_code                   ; work         ;
-;    |adc_dac_control:adc_dac_control0|                                                                                                   ; 1976 (445)  ; 225 (225)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1751 (220)   ; 24 (24)           ; 201 (201)        ; |EDL_merged_code|adc_dac_control:adc_dac_control0                                                                                                                                                                                                                                                                                                           ; adc_dac_control                   ; work         ;
+; |EDL_merged_code                                                                                                                        ; 2311 (88)   ; 449 (69)                  ; 0 (0)         ; 960         ; 2    ; 0            ; 0       ; 0         ; 49   ; 0            ; 1862 (24)    ; 68 (14)           ; 381 (49)         ; |EDL_merged_code                                                                                                                                                                                                                                                                                                                                            ; EDL_merged_code                   ; work         ;
+;    |adc_dac_control:adc_dac_control0|                                                                                                   ; 1964 (433)  ; 215 (215)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1749 (218)   ; 23 (23)           ; 192 (192)        ; |EDL_merged_code|adc_dac_control:adc_dac_control0                                                                                                                                                                                                                                                                                                           ; adc_dac_control                   ; work         ;
 ;       |lpm_divide:Mod0|                                                                                                                 ; 1531 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1531 (0)     ; 0 (0)             ; 0 (0)            ; |EDL_merged_code|adc_dac_control:adc_dac_control0|lpm_divide:Mod0                                                                                                                                                                                                                                                                                           ; lpm_divide                        ; work         ;
 ;          |lpm_divide_cqo:auto_generated|                                                                                                ; 1531 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1531 (0)     ; 0 (0)             ; 0 (0)            ; |EDL_merged_code|adc_dac_control:adc_dac_control0|lpm_divide:Mod0|lpm_divide_cqo:auto_generated                                                                                                                                                                                                                                                             ; lpm_divide_cqo                    ; work         ;
 ;             |abs_divider_4dg:divider|                                                                                                   ; 1531 (64)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1531 (64)    ; 0 (0)             ; 0 (0)            ; |EDL_merged_code|adc_dac_control:adc_dac_control0|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider                                                                                                                                                                                                                                     ; abs_divider_4dg                   ; work         ;
@@ -834,9 +831,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 128 (87)    ; 70 (42)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (43)      ; 11 (10)           ; 61 (36)          ; |EDL_merged_code|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 20 (20)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 9 (9)            ; |EDL_merged_code|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 21 (21)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 1 (1)             ; 18 (18)          ; |EDL_merged_code|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
-;    |uart_jtag:uart_jtag1|                                                                                                               ; 127 (0)     ; 90 (0)                    ; 0 (0)         ; 960         ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 17 (0)            ; 80 (0)           ; |EDL_merged_code|uart_jtag:uart_jtag1                                                                                                                                                                                                                                                                                                                       ; uart_jtag                         ; uart_jtag    ;
-;       |uart_jtag_ju:ju|                                                                                                                 ; 127 (14)    ; 90 (5)                    ; 0 (0)         ; 960         ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (3)       ; 17 (1)            ; 80 (10)          ; |EDL_merged_code|uart_jtag:uart_jtag1|uart_jtag_ju:ju                                                                                                                                                                                                                                                                                                       ; uart_jtag_ju                      ; uart_jtag    ;
-;          |alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic|                                                                             ; 63 (63)     ; 45 (45)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 16 (16)           ; 30 (30)          ; |EDL_merged_code|uart_jtag:uart_jtag1|uart_jtag_ju:ju|alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic                                                                                                                                                                                                                                                      ; alt_jtag_atlantic                 ; work         ;
+;    |uart_jtag:uart_jtag1|                                                                                                               ; 127 (0)     ; 90 (0)                    ; 0 (0)         ; 960         ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (0)       ; 17 (0)            ; 79 (0)           ; |EDL_merged_code|uart_jtag:uart_jtag1                                                                                                                                                                                                                                                                                                                       ; uart_jtag                         ; uart_jtag    ;
+;       |uart_jtag_ju:ju|                                                                                                                 ; 127 (14)    ; 90 (5)                    ; 0 (0)         ; 960         ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (3)       ; 17 (1)            ; 79 (10)          ; |EDL_merged_code|uart_jtag:uart_jtag1|uart_jtag_ju:ju                                                                                                                                                                                                                                                                                                       ; uart_jtag_ju                      ; uart_jtag    ;
+;          |alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic|                                                                             ; 63 (63)     ; 45 (45)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 16 (16)           ; 29 (29)          ; |EDL_merged_code|uart_jtag:uart_jtag1|uart_jtag_ju:ju|alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic                                                                                                                                                                                                                                                      ; alt_jtag_atlantic                 ; work         ;
 ;          |uart_jtag_ju_scfifo_r:the_uart_jtag_ju_scfifo_r|                                                                              ; 25 (0)      ; 20 (0)                    ; 0 (0)         ; 448         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 20 (0)           ; |EDL_merged_code|uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_r:the_uart_jtag_ju_scfifo_r                                                                                                                                                                                                                                                       ; uart_jtag_ju_scfifo_r             ; uart_jtag    ;
 ;             |scfifo:rfifo|                                                                                                              ; 25 (0)      ; 20 (0)                    ; 0 (0)         ; 448         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 20 (0)           ; |EDL_merged_code|uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_r:the_uart_jtag_ju_scfifo_r|scfifo:rfifo                                                                                                                                                                                                                                          ; scfifo                            ; work         ;
 ;                |scfifo_jr21:auto_generated|                                                                                             ; 25 (0)      ; 20 (0)                    ; 0 (0)         ; 448         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 20 (0)           ; |EDL_merged_code|uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_r:the_uart_jtag_ju_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated                                                                                                                                                                                                               ; scfifo_jr21                       ; work         ;
@@ -884,6 +881,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Din_ADC               ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; CS_ADC                ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; Sclk_ADC              ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; ch_display_select     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; controlmain_reset     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; controlmain_readwrite ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; Control1              ; Output   ; --            ; --            ; --                    ; --  ; --   ;
@@ -911,7 +909,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Control_Hz3A          ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; Control_Hz3B          ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk                   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; ch_display_select     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; Dout_ADC              ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +-----------------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -922,8 +919,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                      ; Pad To Core Index ; Setting ;
 +----------------------------------------------------------+-------------------+---------+
 ; in_read                                                  ;                   ;         ;
-; clk                                                      ;                   ;         ;
 ; ch_display_select                                        ;                   ;         ;
+; clk                                                      ;                   ;         ;
 ; Dout_ADC                                                 ;                   ;         ;
 ;      - adc_dac_control:adc_dac_control0|rx_buf_ADC[5]~4  ; 0                 ; 6       ;
 ;      - adc_dac_control:adc_dac_control0|rx_buf_ADC[0]~5  ; 0                 ; 6       ;
@@ -943,56 +940,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                                                                                                                                                                                                                                                                        ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; adc_dac_control:adc_dac_control0|CH0_measured_ADC[5]~0                                                                                                                                                                                                                                                                                                      ; LCCOMB_X24_Y22_N4  ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|CH1_measured_ADC[5]~2                                                                                                                                                                                                                                                                                                      ; LCCOMB_X24_Y22_N18 ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|Equal0~10                                                                                                                                                                                                                                                                                                                  ; LCCOMB_X23_Y17_N20 ; 19      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|Equal15~1                                                                                                                                                                                                                                                                                                                  ; LCCOMB_X23_Y23_N20 ; 40      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|Equal2~10                                                                                                                                                                                                                                                                                                                  ; LCCOMB_X24_Y22_N22 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|LDAC_DAC~0                                                                                                                                                                                                                                                                                                                 ; LCCOMB_X16_Y29_N2  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|clk_int_ADC                                                                                                                                                                                                                                                                                                                ; FF_X27_Y1_N9       ; 76      ; Clock                      ; yes    ; Global Clock         ; GCLK16           ; --                        ;
-; adc_dac_control:adc_dac_control0|clk_int_DAC                                                                                                                                                                                                                                                                                                                ; FF_X20_Y33_N25     ; 71      ; Clock                      ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; adc_dac_control:adc_dac_control0|counter_DAC[28]~45                                                                                                                                                                                                                                                                                                         ; LCCOMB_X17_Y29_N24 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|counter_DAC~44                                                                                                                                                                                                                                                                                                             ; LCCOMB_X16_Y32_N18 ; 32      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|counter_sec_ADC~98                                                                                                                                                                                                                                                                                                         ; LCCOMB_X21_Y25_N18 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|counter_sec_DAC[31]~41                                                                                                                                                                                                                                                                                                     ; LCCOMB_X16_Y32_N0  ; 33      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|op_bit_ADC[3]~0                                                                                                                                                                                                                                                                                                            ; LCCOMB_X23_Y25_N14 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|opbit_DAC[0]~10                                                                                                                                                                                                                                                                                                            ; LCCOMB_X16_Y29_N10 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; adc_dac_control:adc_dac_control0|opbit_DAC~9                                                                                                                                                                                                                                                                                                                ; LCCOMB_X17_Y29_N20 ; 4       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|CH1_measured_ADC[5]~3                                                                                                                                                                                                                                                                                                      ; LCCOMB_X31_Y26_N10 ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|CS_DAC~2                                                                                                                                                                                                                                                                                                                   ; LCCOMB_X27_Y28_N2  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|Equal0~10                                                                                                                                                                                                                                                                                                                  ; LCCOMB_X24_Y21_N14 ; 19      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|Equal15~1                                                                                                                                                                                                                                                                                                                  ; LCCOMB_X34_Y30_N4  ; 40      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|Equal2~10                                                                                                                                                                                                                                                                                                                  ; LCCOMB_X31_Y25_N8  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|clk_int_ADC                                                                                                                                                                                                                                                                                                                ; FF_X20_Y33_N1      ; 66      ; Clock                      ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; adc_dac_control:adc_dac_control0|clk_int_DAC                                                                                                                                                                                                                                                                                                                ; FF_X17_Y31_N9      ; 71      ; Clock                      ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; adc_dac_control:adc_dac_control0|counter_DAC[8]~45                                                                                                                                                                                                                                                                                                          ; LCCOMB_X21_Y30_N8  ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|counter_DAC~44                                                                                                                                                                                                                                                                                                             ; LCCOMB_X24_Y30_N18 ; 32      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|counter_sec_ADC~98                                                                                                                                                                                                                                                                                                         ; LCCOMB_X34_Y30_N6  ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|counter_sec_DAC[31]~41                                                                                                                                                                                                                                                                                                     ; LCCOMB_X24_Y30_N0  ; 33      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|op_bit_ADC[3]~0                                                                                                                                                                                                                                                                                                            ; LCCOMB_X32_Y30_N4  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|opbit_DAC[0]~10                                                                                                                                                                                                                                                                                                            ; LCCOMB_X27_Y28_N0  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; adc_dac_control:adc_dac_control0|opbit_DAC~9                                                                                                                                                                                                                                                                                                                ; LCCOMB_X24_Y29_N20 ; 4       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
 ; altera_internal_jtag~TCKUTAP                                                                                                                                                                                                                                                                                                                                ; JTAG_X1_Y17_N0     ; 112     ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 ; altera_internal_jtag~TMSUTAP                                                                                                                                                                                                                                                                                                                                ; JTAG_X1_Y17_N0     ; 23      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; always0~0                                                                                                                                                                                                                                                                                                                                                   ; LCCOMB_X23_Y26_N2  ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; always0~0                                                                                                                                                                                                                                                                                                                                                   ; LCCOMB_X34_Y16_N14 ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 ; clk                                                                                                                                                                                                                                                                                                                                                         ; PIN_R8             ; 190     ; Clock                      ; yes    ; Global Clock         ; GCLK18           ; --                        ;
-; pulse_value[0]~0                                                                                                                                                                                                                                                                                                                                            ; LCCOMB_X23_Y26_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; push_val_to_DAC                                                                                                                                                                                                                                                                                                                                             ; FF_X24_Y30_N25     ; 12      ; Clock                      ; yes    ; Global Clock         ; GCLK13           ; --                        ;
-; push_val_to_DAC~0                                                                                                                                                                                                                                                                                                                                           ; LCCOMB_X23_Y27_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg                                    ; FF_X12_Y23_N1      ; 47      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_proc~0                         ; LCCOMB_X11_Y22_N12 ; 4       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_info_reg_ena                           ; LCCOMB_X11_Y22_N28 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_info_reg_ena~0                         ; LCCOMB_X14_Y21_N10 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[0]~1            ; LCCOMB_X14_Y22_N8  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]~2                              ; LCCOMB_X15_Y22_N22 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]~11              ; LCCOMB_X12_Y22_N8  ; 5       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]~12              ; LCCOMB_X11_Y22_N6  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[1]~1       ; LCCOMB_X11_Y24_N8  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[2]~10 ; LCCOMB_X11_Y24_N14 ; 5       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[2]~11 ; LCCOMB_X11_Y24_N2  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[0]         ; FF_X12_Y23_N27     ; 15      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[11]        ; FF_X12_Y23_N19     ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[4]         ; FF_X14_Y21_N25     ; 42      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_dr_scan_proc~0                  ; LCCOMB_X12_Y23_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg                        ; FF_X11_Y23_N25     ; 24      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|sldfabric_ident_writedata[0]~0                                                                                                      ; LCCOMB_X14_Y22_N20 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; state.000000000000                                                                                                                                                                                                                                                                                                                                          ; FF_X23_Y28_N29     ; 37      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic|r_ena~0                                                                                                                                                                                                                                                               ; LCCOMB_X16_Y26_N0  ; 1       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic|td_shift[0]~4                                                                                                                                                                                                                                                         ; LCCOMB_X15_Y23_N18 ; 21      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic|wdata[0]~2                                                                                                                                                                                                                                                            ; LCCOMB_X16_Y23_N8  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic|wdata[7]~1                                                                                                                                                                                                                                                            ; LCCOMB_X18_Y23_N2  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|fifo_rd~0                                                                                                                                                                                                                                                                                                              ; LCCOMB_X23_Y27_N26 ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|fifo_wr                                                                                                                                                                                                                                                                                                                ; FF_X23_Y26_N5      ; 15      ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|r_val~0                                                                                                                                                                                                                                                                                                                ; LCCOMB_X16_Y26_N30 ; 11      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_r:the_uart_jtag_ju_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_l011:dpfifo|a_fefifo_7cf:fifo_state|_~4                                                                                                                                                                               ; LCCOMB_X20_Y27_N28 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_w:the_uart_jtag_ju_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_l011:dpfifo|a_fefifo_7cf:fifo_state|_~0                                                                                                                                                                               ; LCCOMB_X17_Y26_N0  ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|wr_rfifo                                                                                                                                                                                                                                                                                                               ; LCCOMB_X20_Y27_N2  ; 12      ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; pulse_value[0]~0                                                                                                                                                                                                                                                                                                                                            ; LCCOMB_X34_Y16_N24 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; push_val_to_DAC                                                                                                                                                                                                                                                                                                                                             ; FF_X34_Y16_N7      ; 12      ; Clock                      ; yes    ; Global Clock         ; GCLK15           ; --                        ;
+; push_val_to_DAC~0                                                                                                                                                                                                                                                                                                                                           ; LCCOMB_X34_Y16_N6  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg                                    ; FF_X15_Y13_N19     ; 47      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_proc~0                         ; LCCOMB_X17_Y12_N18 ; 4       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_info_reg_ena                           ; LCCOMB_X17_Y12_N20 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_info_reg_ena~0                         ; LCCOMB_X17_Y13_N18 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[0]~1            ; LCCOMB_X23_Y13_N2  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]~2                              ; LCCOMB_X17_Y13_N22 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]~11              ; LCCOMB_X17_Y12_N6  ; 5       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]~12              ; LCCOMB_X17_Y12_N30 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[1]~1       ; LCCOMB_X17_Y12_N0  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[2]~10 ; LCCOMB_X19_Y12_N0  ; 5       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[2]~11 ; LCCOMB_X19_Y12_N18 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[0]         ; FF_X16_Y14_N31     ; 15      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[11]        ; FF_X16_Y13_N3      ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[4]         ; FF_X17_Y13_N1      ; 42      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_dr_scan_proc~0                  ; LCCOMB_X16_Y13_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg                        ; FF_X14_Y13_N25     ; 24      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|sldfabric_ident_writedata[0]~0                                                                                                      ; LCCOMB_X23_Y13_N16 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; state.000000000000                                                                                                                                                                                                                                                                                                                                          ; FF_X31_Y12_N25     ; 37      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic|r_ena~0                                                                                                                                                                                                                                                               ; LCCOMB_X30_Y14_N12 ; 1       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic|td_shift[0]~4                                                                                                                                                                                                                                                         ; LCCOMB_X26_Y14_N20 ; 21      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic|wdata[0]~2                                                                                                                                                                                                                                                            ; LCCOMB_X27_Y14_N24 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|alt_jtag_atlantic:uart_jtag_ju_alt_jtag_atlantic|wdata[7]~1                                                                                                                                                                                                                                                            ; LCCOMB_X27_Y14_N6  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|fifo_rd~0                                                                                                                                                                                                                                                                                                              ; LCCOMB_X31_Y16_N6  ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|fifo_wr                                                                                                                                                                                                                                                                                                                ; FF_X34_Y16_N23     ; 15      ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|r_val~0                                                                                                                                                                                                                                                                                                                ; LCCOMB_X30_Y14_N14 ; 11      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_r:the_uart_jtag_ju_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_l011:dpfifo|a_fefifo_7cf:fifo_state|_~4                                                                                                                                                                               ; LCCOMB_X31_Y16_N30 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_w:the_uart_jtag_ju_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_l011:dpfifo|a_fefifo_7cf:fifo_state|_~0                                                                                                                                                                               ; LCCOMB_X34_Y15_N0  ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|wr_rfifo                                                                                                                                                                                                                                                                                                               ; LCCOMB_X31_Y16_N10 ; 12      ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1001,11 +997,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                         ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; adc_dac_control:adc_dac_control0|clk_int_ADC ; FF_X27_Y1_N9   ; 76      ; 0                                    ; Global Clock         ; GCLK16           ; --                        ;
-; adc_dac_control:adc_dac_control0|clk_int_DAC ; FF_X20_Y33_N25 ; 71      ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
+; adc_dac_control:adc_dac_control0|clk_int_ADC ; FF_X20_Y33_N1  ; 66      ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
+; adc_dac_control:adc_dac_control0|clk_int_DAC ; FF_X17_Y31_N9  ; 71      ; 0                                    ; Global Clock         ; GCLK14           ; --                        ;
 ; altera_internal_jtag~TCKUTAP                 ; JTAG_X1_Y17_N0 ; 112     ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
 ; clk                                          ; PIN_R8         ; 190     ; 0                                    ; Global Clock         ; GCLK18           ; --                        ;
-; push_val_to_DAC                              ; FF_X24_Y30_N25 ; 12      ; 0                                    ; Global Clock         ; GCLK13           ; --                        ;
+; push_val_to_DAC                              ; FF_X34_Y16_N7  ; 12      ; 0                                    ; Global Clock         ; GCLK15           ; --                        ;
 +----------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1014,8 +1010,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                                                                                                                 ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF  ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_r:the_uart_jtag_ju_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_l011:dpfifo|altsyncram_nio1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 64           ; 8            ; 64           ; 8            ; yes                    ; no                      ; yes                    ; no                      ; 512  ; 64                          ; 7                           ; 64                          ; 7                           ; 448                 ; 1    ; None ; M9K_X22_Y27_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
-; uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_w:the_uart_jtag_ju_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_l011:dpfifo|altsyncram_nio1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 64           ; 8            ; 64           ; 8            ; yes                    ; no                      ; yes                    ; yes                     ; 512  ; 64                          ; 8                           ; 64                          ; 8                           ; 512                 ; 1    ; None ; M9K_X22_Y26_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_r:the_uart_jtag_ju_scfifo_r|scfifo:rfifo|scfifo_jr21:auto_generated|a_dpfifo_l011:dpfifo|altsyncram_nio1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 64           ; 8            ; 64           ; 8            ; yes                    ; no                      ; yes                    ; no                      ; 512  ; 64                          ; 7                           ; 64                          ; 7                           ; 448                 ; 1    ; None ; M9K_X33_Y14_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; uart_jtag:uart_jtag1|uart_jtag_ju:ju|uart_jtag_ju_scfifo_w:the_uart_jtag_ju_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_l011:dpfifo|altsyncram_nio1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 64           ; 8            ; 64           ; 8            ; yes                    ; no                      ; yes                    ; yes                     ; 512  ; 64                          ; 8                           ; 64                          ; 8                           ; 512                 ; 1    ; None ; M9K_X33_Y16_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1025,91 +1021,92 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 2,887 / 71,559 ( 4 % ) ;
-; C16 interconnects     ; 3 / 2,597 ( < 1 % )    ;
-; C4 interconnects      ; 1,481 / 46,848 ( 3 % ) ;
-; Direct links          ; 522 / 71,559 ( < 1 % ) ;
+; Block interconnects   ; 2,847 / 71,559 ( 4 % ) ;
+; C16 interconnects     ; 4 / 2,597 ( < 1 % )    ;
+; C4 interconnects      ; 1,431 / 46,848 ( 3 % ) ;
+; Direct links          ; 566 / 71,559 ( < 1 % ) ;
 ; Global clocks         ; 5 / 20 ( 25 % )        ;
-; Local interconnects   ; 809 / 24,624 ( 3 % )   ;
-; R24 interconnects     ; 11 / 2,496 ( < 1 % )   ;
-; R4 interconnects      ; 1,582 / 62,424 ( 3 % ) ;
+; Local interconnects   ; 825 / 24,624 ( 3 % )   ;
+; R24 interconnects     ; 9 / 2,496 ( < 1 % )    ;
+; R4 interconnects      ; 1,525 / 62,424 ( 2 % ) ;
 +-----------------------+------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 12.63) ; Number of LABs  (Total = 184) ;
+; Number of Logic Elements  (Average = 12.70) ; Number of LABs  (Total = 182) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 16                            ;
-; 2                                           ; 7                             ;
-; 3                                           ; 4                             ;
-; 4                                           ; 2                             ;
-; 5                                           ; 1                             ;
-; 6                                           ; 1                             ;
-; 7                                           ; 4                             ;
+; 1                                           ; 11                            ;
+; 2                                           ; 8                             ;
+; 3                                           ; 5                             ;
+; 4                                           ; 1                             ;
+; 5                                           ; 2                             ;
+; 6                                           ; 5                             ;
+; 7                                           ; 3                             ;
 ; 8                                           ; 3                             ;
-; 9                                           ; 2                             ;
+; 9                                           ; 1                             ;
 ; 10                                          ; 3                             ;
 ; 11                                          ; 4                             ;
-; 12                                          ; 4                             ;
-; 13                                          ; 7                             ;
-; 14                                          ; 10                            ;
-; 15                                          ; 17                            ;
-; 16                                          ; 99                            ;
+; 12                                          ; 3                             ;
+; 13                                          ; 10                            ;
+; 14                                          ; 11                            ;
+; 15                                          ; 15                            ;
+; 16                                          ; 97                            ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 0.52) ; Number of LABs  (Total = 184) ;
+; LAB-wide Signals  (Average = 0.55) ; Number of LABs  (Total = 182) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 7                             ;
-; 1 Clock                            ; 57                            ;
-; 1 Clock enable                     ; 23                            ;
-; 1 Sync. clear                      ; 5                             ;
-; 2 Clock enables                    ; 1                             ;
-; 2 Clocks                           ; 3                             ;
+; 1 Async. clear                     ; 9                             ;
+; 1 Clock                            ; 55                            ;
+; 1 Clock enable                     ; 24                            ;
+; 1 Sync. clear                      ; 7                             ;
+; 1 Sync. load                       ; 1                             ;
+; 2 Clock enables                    ; 3                             ;
+; 2 Clocks                           ; 2                             ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 14.99) ; Number of LABs  (Total = 184) ;
+; Number of Signals Sourced  (Average = 15.01) ; Number of LABs  (Total = 182) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 1                             ;
-; 1                                            ; 9                             ;
+; 1                                            ; 7                             ;
 ; 2                                            ; 11                            ;
-; 3                                            ; 4                             ;
-; 4                                            ; 3                             ;
+; 3                                            ; 5                             ;
+; 4                                            ; 1                             ;
 ; 5                                            ; 1                             ;
 ; 6                                            ; 1                             ;
-; 7                                            ; 2                             ;
-; 8                                            ; 0                             ;
-; 9                                            ; 2                             ;
-; 10                                           ; 2                             ;
-; 11                                           ; 1                             ;
-; 12                                           ; 2                             ;
-; 13                                           ; 5                             ;
-; 14                                           ; 9                             ;
-; 15                                           ; 12                            ;
-; 16                                           ; 81                            ;
-; 17                                           ; 1                             ;
-; 18                                           ; 4                             ;
-; 19                                           ; 0                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 1                             ;
+; 9                                            ; 1                             ;
+; 10                                           ; 0                             ;
+; 11                                           ; 3                             ;
+; 12                                           ; 8                             ;
+; 13                                           ; 7                             ;
+; 14                                           ; 8                             ;
+; 15                                           ; 14                            ;
+; 16                                           ; 75                            ;
+; 17                                           ; 3                             ;
+; 18                                           ; 3                             ;
+; 19                                           ; 2                             ;
 ; 20                                           ; 2                             ;
-; 21                                           ; 7                             ;
-; 22                                           ; 1                             ;
+; 21                                           ; 4                             ;
+; 22                                           ; 2                             ;
 ; 23                                           ; 5                             ;
-; 24                                           ; 2                             ;
+; 24                                           ; 0                             ;
 ; 25                                           ; 2                             ;
 ; 26                                           ; 0                             ;
-; 27                                           ; 1                             ;
-; 28                                           ; 2                             ;
-; 29                                           ; 2                             ;
-; 30                                           ; 0                             ;
+; 27                                           ; 0                             ;
+; 28                                           ; 3                             ;
+; 29                                           ; 1                             ;
+; 30                                           ; 1                             ;
 ; 31                                           ; 1                             ;
 ; 32                                           ; 8                             ;
 +----------------------------------------------+-------------------------------+
@@ -1118,64 +1115,64 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +----------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                          ;
 +--------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 10.73) ; Number of LABs  (Total = 184) ;
+; Number of Signals Sourced Out  (Average = 10.76) ; Number of LABs  (Total = 182) ;
 +--------------------------------------------------+-------------------------------+
 ; 0                                                ; 1                             ;
-; 1                                                ; 20                            ;
-; 2                                                ; 10                            ;
-; 3                                                ; 5                             ;
-; 4                                                ; 8                             ;
-; 5                                                ; 5                             ;
-; 6                                                ; 2                             ;
-; 7                                                ; 5                             ;
-; 8                                                ; 2                             ;
-; 9                                                ; 8                             ;
+; 1                                                ; 13                            ;
+; 2                                                ; 12                            ;
+; 3                                                ; 10                            ;
+; 4                                                ; 4                             ;
+; 5                                                ; 4                             ;
+; 6                                                ; 11                            ;
+; 7                                                ; 2                             ;
+; 8                                                ; 1                             ;
+; 9                                                ; 5                             ;
 ; 10                                               ; 3                             ;
-; 11                                               ; 6                             ;
-; 12                                               ; 6                             ;
-; 13                                               ; 12                            ;
-; 14                                               ; 14                            ;
-; 15                                               ; 24                            ;
-; 16                                               ; 53                            ;
+; 11                                               ; 9                             ;
+; 12                                               ; 8                             ;
+; 13                                               ; 11                            ;
+; 14                                               ; 17                            ;
+; 15                                               ; 19                            ;
+; 16                                               ; 52                            ;
 +--------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 14.78) ; Number of LABs  (Total = 184) ;
+; Number of Distinct Inputs  (Average = 14.75) ; Number of LABs  (Total = 182) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 2                             ;
-; 2                                            ; 10                            ;
-; 3                                            ; 10                            ;
-; 4                                            ; 9                             ;
+; 1                                            ; 3                             ;
+; 2                                            ; 11                            ;
+; 3                                            ; 8                             ;
+; 4                                            ; 8                             ;
 ; 5                                            ; 3                             ;
-; 6                                            ; 9                             ;
-; 7                                            ; 4                             ;
-; 8                                            ; 8                             ;
-; 9                                            ; 3                             ;
-; 10                                           ; 1                             ;
+; 6                                            ; 6                             ;
+; 7                                            ; 7                             ;
+; 8                                            ; 4                             ;
+; 9                                            ; 4                             ;
+; 10                                           ; 4                             ;
 ; 11                                           ; 3                             ;
 ; 12                                           ; 5                             ;
 ; 13                                           ; 2                             ;
-; 14                                           ; 6                             ;
-; 15                                           ; 10                            ;
-; 16                                           ; 9                             ;
-; 17                                           ; 26                            ;
-; 18                                           ; 10                            ;
+; 14                                           ; 8                             ;
+; 15                                           ; 13                            ;
+; 16                                           ; 16                            ;
+; 17                                           ; 18                            ;
+; 18                                           ; 8                             ;
 ; 19                                           ; 6                             ;
-; 20                                           ; 3                             ;
-; 21                                           ; 3                             ;
-; 22                                           ; 5                             ;
-; 23                                           ; 1                             ;
-; 24                                           ; 6                             ;
+; 20                                           ; 5                             ;
+; 21                                           ; 2                             ;
+; 22                                           ; 3                             ;
+; 23                                           ; 3                             ;
+; 24                                           ; 3                             ;
 ; 25                                           ; 2                             ;
-; 26                                           ; 5                             ;
-; 27                                           ; 2                             ;
-; 28                                           ; 5                             ;
-; 29                                           ; 6                             ;
-; 30                                           ; 1                             ;
+; 26                                           ; 4                             ;
+; 27                                           ; 5                             ;
+; 28                                           ; 3                             ;
+; 29                                           ; 4                             ;
+; 30                                           ; 3                             ;
 ; 31                                           ; 4                             ;
 ; 32                                           ; 1                             ;
 ; 33                                           ; 2                             ;
@@ -1239,9 +1236,9 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules             ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +-----------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass            ; 40           ; 0            ; 40           ; 0            ; 0            ; 53        ; 40           ; 0            ; 53        ; 53        ; 0            ; 45           ; 0            ; 0            ; 4            ; 0            ; 45           ; 4            ; 0            ; 0            ; 0            ; 45           ; 0            ; 0            ; 0            ; 0            ; 0            ; 53        ; 0            ; 0            ;
+; Total Pass            ; 44           ; 0            ; 44           ; 0            ; 0            ; 53        ; 44           ; 0            ; 53        ; 53        ; 0            ; 45           ; 0            ; 0            ; 4            ; 0            ; 45           ; 4            ; 0            ; 0            ; 0            ; 45           ; 0            ; 0            ; 0            ; 0            ; 0            ; 53        ; 0            ; 0            ;
 ; Total Unchecked       ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable    ; 13           ; 53           ; 13           ; 53           ; 53           ; 0         ; 13           ; 53           ; 0         ; 0         ; 53           ; 8            ; 53           ; 53           ; 49           ; 53           ; 8            ; 49           ; 53           ; 53           ; 53           ; 8            ; 53           ; 53           ; 53           ; 53           ; 53           ; 0         ; 53           ; 53           ;
+; Total Inapplicable    ; 9            ; 53           ; 9            ; 53           ; 53           ; 0         ; 9            ; 53           ; 0         ; 0         ; 53           ; 8            ; 53           ; 53           ; 49           ; 53           ; 8            ; 49           ; 53           ; 53           ; 53           ; 8            ; 53           ; 53           ; 53           ; 53           ; 53           ; 0         ; 53           ; 53           ;
 ; Total Fail            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; in_read               ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; HIGH                  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1260,9 +1257,10 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; SDI_DAC               ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LDAC_DAC              ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; reset_ADC             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; Din_ADC               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; CS_ADC                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; Sclk_ADC              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; Din_ADC               ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; CS_ADC                ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; Sclk_ADC              ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; ch_display_select     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; controlmain_reset     ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; controlmain_readwrite ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Control1              ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1290,8 +1288,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; Control_Hz3A          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Control_Hz3B          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                   ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; ch_display_select     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; Dout_ADC              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; Dout_ADC              ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; altera_reserved_tms   ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; altera_reserved_tck   ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; altera_reserved_tdi   ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1357,7 +1354,7 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location F16
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
-Critical Warning (169085): No exact pin location assignment(s) for 9 pins of 49 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Critical Warning (169085): No exact pin location assignment(s) for 5 pins of 49 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (332164): Evaluating HDL-embedded SDC commands
     Info (332165): Entity alt_jtag_atlantic
         Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|jupdate}] -to [get_registers {*|alt_jtag_atlantic:*|jupdate1*}] 
@@ -1419,23 +1416,23 @@ Info (176353): Automatically promoted node clk~input (placed in PIN R8 (CLK15, D
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G18
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node adc_dac_control:adc_dac_control0|clk_int_ADC  File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/ADC_DAC_control.vhd Line: 244
+Info (176353): Automatically promoted node adc_dac_control:adc_dac_control0|clk_int_DAC  File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/ADC_DAC_control.vhd Line: 158
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node adc_dac_control:adc_dac_control0|clk_int_ADC~0 File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/ADC_DAC_control.vhd Line: 244
-        Info (176357): Destination node Sclk_ADC~output File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/EDL_merged_code.v Line: 21
-Info (176353): Automatically promoted node adc_dac_control:adc_dac_control0|clk_int_DAC  File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/ADC_DAC_control.vhd Line: 157
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node adc_dac_control:adc_dac_control0|clk_int_DAC~0 File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/ADC_DAC_control.vhd Line: 157
+        Info (176357): Destination node adc_dac_control:adc_dac_control0|clk_int_DAC~0 File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/ADC_DAC_control.vhd Line: 158
         Info (176357): Destination node SCK_DAC~output File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/EDL_merged_code.v Line: 12
+Info (176353): Automatically promoted node adc_dac_control:adc_dac_control0|clk_int_ADC  File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/ADC_DAC_control.vhd Line: 245
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node adc_dac_control:adc_dac_control0|clk_int_ADC~0 File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/ADC_DAC_control.vhd Line: 245
+        Info (176357): Destination node Sclk_ADC~output File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/EDL_merged_code.v Line: 21
 Info (176353): Automatically promoted node push_val_to_DAC  File: D:/EDL_merged_code_full_working_FSM/EDL_merged_code/EDL_merged_code.v Line: 74
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176218): Packed 8 registers into blocks of type Block RAM
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 9 (unused VREF, 2.5V VCCIO, 2 input, 7 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 5 (unused VREF, 2.5V VCCIO, 1 input, 4 output, 0 bidirectional)
         Info (176212): I/O standards used: 2.5 V.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -1445,8 +1442,8 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  20 pins available
         Info (176213): I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  18 pins available
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  12 pins available
-        Info (176213): I/O bank number 7 does not use VREF pins and has 2.5V VCCIO pins. 14 total pin(s) used --  10 pins available
-        Info (176213): I/O bank number 8 does not use VREF pins and has 2.5V VCCIO pins. 21 total pin(s) used --  3 pins available
+        Info (176213): I/O bank number 7 does not use VREF pins and has 2.5V VCCIO pins. 16 total pin(s) used --  8 pins available
+        Info (176213): I/O bank number 8 does not use VREF pins and has 2.5V VCCIO pins. 23 total pin(s) used --  1 pins available
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
@@ -1456,22 +1453,22 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 2% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 16% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
+    Info (170196): Router estimated peak interconnect usage is 14% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.26 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file D:/EDL_merged_code_full_working_FSM/EDL_merged_code/output_files/EDL_merged_code.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 6157 megabytes
-    Info: Processing ended: Thu Apr 11 22:39:23 2024
-    Info: Elapsed time: 00:00:10
+    Info: Processing ended: Fri Apr 12 00:19:29 2024
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:09
 
 
