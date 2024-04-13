@@ -1,0 +1,6 @@
+
+State Machine - |EDL_merged_code|state
+Name state.000000000000 state.000000000010 state.000000000001 
+state.000000000000 0 0 0 
+state.000000000001 1 0 1 
+state.000000000010 1 1 0 
