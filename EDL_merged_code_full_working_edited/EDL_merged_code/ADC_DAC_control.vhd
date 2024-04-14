@@ -294,7 +294,7 @@ measurement_display_proc_2: process(clk_50Mhz)
 				counter_sec_ADC <= 0;
 				
 			elsif(counter_ADC = x"00" ) then		--reset_ADC
-				if(counter_sec_ADC <= 300000) then							--5 works? | does 3000000, 500000
+				if(counter_sec_ADC <= 1800000) then							--5 works? | does 3000000, 500000
 					counter_sec_ADC <= counter_sec_ADC + 1;
 					 
 				else

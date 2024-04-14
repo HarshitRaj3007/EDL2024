@@ -194,7 +194,16 @@ module EDL_merged_code(
 	 
 	 
 	 //logic flow signals
-	
+	 
+	 reg[23:0] control_signals;
+	 initial begin
+	 control_signals <= 24'b000000000000000000000000;	
+	 end		
+	 
+	 reg[2:0] control_signals_received;
+	 initial begin
+	 control_signals_received <= 3'b000;
+	 end
 	 
 	 reg[31:0] counter;
 	 initial begin 
@@ -252,7 +261,6 @@ module EDL_merged_code(
 		if(sample_counter <= 32'd31) begin
 			if (store_trigger) begin
 			   sample_index <= sample_counter;
-//				measured_values_CH1[sample_index] <= measured_val_CH1;
 				measured_values_CH1_single_vector[10*(sample_index+1) +:10] <= measured_val_CH1;
 			end
 		end
@@ -315,11 +323,23 @@ module EDL_merged_code(
 				
 				if (both_transferred == 4'b1100) begin
 					push_val_to_DAC <= 1'b1;
-					state <= 32'd9995;
+					state <= 32'd9995;			//32'd9995
 					both_transferred <= 4'b0101;
 					reading <= 1'b0;
 				   writing <= 1'b0;
 					received_at_laptop <= 1'b0;
+				end	
+			end
+
+			//control signnals: 8001, 8002, 8003
+			
+			if (state == 32'd8001) begin
+				reading <= 1'b1;
+				writing <= 1'b0;
+				if (control_signals_received == 3'b001) begin
+					state <= 32'd9995;
+					reading <= 1'b1;
+				   writing <= 1'b0;
 				end	
 			end
 			
@@ -327,6 +347,7 @@ module EDL_merged_code(
 				start_sampling <= 1'b1;
 				push_val_to_DAC <= 1'b0;
 				writing <= 1'b0;
+				reading <= 1'b0;
 				
 				if(sampling_complete == 1'b1) begin
 					state <= 32'd2;
@@ -406,19 +427,36 @@ module EDL_merged_code(
 				if(jtag_uart_read && !jtag_uart_waitrequest) begin
 					jtag_uart_read <= 1'b0;
 					
-					if(!jtag_uart_readdata[7]) begin
+					if(!jtag_uart_readdata[7] && state == 32'd1) begin
 						pulse_value[5:0] <= jtag_uart_readdata[5:0];
 						both_transferred[1:0] <= 2'b00; 
 					end
 					
-					else begin
+//					else if(jtag_uart_readdata[7] && (state == 32'd1 || state == 32'd9995)) begin
+					else if(jtag_uart_readdata[7]) begin
 						if (jtag_uart_readdata[7:6] == 2'b10) begin
 							received_at_laptop <= 1'b1;
 						end	
 						pulse_value[11:6] <= jtag_uart_readdata[5:0];
 						both_transferred[3:2] <= 2'b11;
 					end
-				end
+					
+					else if(state == 32'd8001 || state == 32'd8002 || state == 32'd8003) begin
+						if(state == 32'd8001 && jtag_uart_readdata[7:0] != 8'b00000000) begin // && jtag_uart_readdata[7:0] != 8'b00000000
+							control_signals[7:0] <= jtag_uart_readdata[7:0];
+							control_signals_received[0] <= 1'b1;
+						end
+						if(state == 32'd8002) begin
+							control_signals[15:8] <= jtag_uart_readdata[7:0];
+							control_signals_received[1] <= 1'b1;
+						end
+						if(state == 32'd8003) begin
+							control_signals[23:16] <= jtag_uart_readdata[7:0];
+							control_signals_received[2] <= 1'b1;
+						end
+					end		//end of the control signals else if block
+					
+				end			//end of reading block for jtag
 //			end				//end of DAC process
 		
 		
@@ -433,16 +471,19 @@ module EDL_merged_code(
 
 //			 writing <= 1'b1;
 //			 LED[7] <= writing;			
-
+//			 LED[7:4] <= control_signals[4:0];
+			 LED[6:0] <= state[6:0];
+			 LED[7] <= received_at_laptop;
+//			 LED[7:0] <= control_signals[7:0];
 //			 LED[6:0] <= measured_val[9:3];
 //			 LED[6:0] <= pulse_value[11:5];
 //			 LED[7] <= store_trigger;
 //			 LED[7] <= start_sampling;
 //			 LED[6:0] <= sample_counter[6:0];
-			 LED[3:0] <= state[3:0];
-			 LED[7:0] <= sample_counter[7:0];
-//			 LED[6] <= writing;
-//			 LED[5] <= reading;
+//			 LED[3:0] <= state[3:0];
+//			 LED[7:0] <= sample_counter[7:0];
+			 LED[6] <= writing;
+			 LED[5] <= reading;
 //			 LED[7] <= sampling_complete;
 //			 LED[4] <= push_val_to_DAC;
 //			 LED[6:0] <= counter[26:20];
@@ -474,9 +515,6 @@ module EDL_merged_code(
 						both_transferred[3:2] <= 2'b11;
 					end
 					
-					if(state == 32'd9995) begin
-						jtag_uart_wdata[7:0] <= 8'b10100000;
-					end
 					
 				end
 				

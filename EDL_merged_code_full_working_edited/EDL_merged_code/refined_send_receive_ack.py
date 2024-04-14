@@ -29,7 +29,8 @@ except Exception as e:
 
 
 
-Vdd = 3.31
+
+Vdd = 5
 
 vol_input = float(input(f"Enter voltage between 0 and {Vdd}V: "))
 
@@ -58,8 +59,15 @@ ju.write(to_fpga)
 # time.sleep(5)
 to_fpga = convert_to_byte(binary_representation[0:8])
 ju.write(to_fpga)
+# ju.flush()
 
-time.sleep(0.1)
+# time.sleep(0.1)
+
+# to_fpga = convert_to_byte("11010101")
+# ju.write(to_fpga)
+# time.sleep(0.1)
+
+# ju.flush()
 
 x = ['   ','.  ','.. ','...']
 i = 0
@@ -89,14 +97,15 @@ for sample_index in range(total_entries):
         # print(from_fpga)
     if(start == 0):
         from_fpga = ju.read()
+    # print(from_fpga)
     start = 0
     # from_fpga = ju.read()
     # print(from_fpga)
     binary1 = (bin(int.from_bytes(from_fpga, byteorder='big')))[-8:]
     binary2 = (bin(int.from_bytes(from_fpga, byteorder='big')))[-16:-8]
-    # print(binary1, binary2)
+    # print(binary1, binary2, from_fpga)
 
-    if binary1 == '0b0':
+    if binary1 == '0b0' and len(samples) > 1:
         all_received = 1
         break
 
@@ -130,7 +139,6 @@ for sample_index in range(total_entries):
         samples.append(from_fpga)
         to_fpga = "10000000"
         byte_literal_to_fpga = convert_to_byte(to_fpga)
-        started_txing_again = 0
         ju.write(byte_literal_to_fpga)
 
 
@@ -138,7 +146,7 @@ for sample_index in range(total_entries):
 # print(samples)
 temp = samples[0][-2:]+samples[1]
 samples = temp
-print(samples)
+# print(samples)
 
 
 
@@ -161,12 +169,29 @@ for sample in samples:
     decimal_value = Vdd*((int(sample, 2))/(2**10))
     # decimal_value = "{:.2f}".format(decimal_value)
     received_entries.append(decimal_value)
-    print(decimal_value, len(samples))
+    # print(decimal_value, len(samples))
 
-samples = samples[1:]
+received_entries = np.asarray(received_entries)[1:]
 
-x = np.arange(0,len(received_entries),1)
-y = np.asarray(received_entries)    
+x = 18.75*np.arange(0,len(received_entries),1)
+y = np.asarray(received_entries)  
+
+V2_avg = 0.00
+# count = 0
+# for val in y:
+#     if(val> 0.7*(vol_input/2.00)):
+#         V2_avg += val
+#         count += 1
+# V2_avg  = V2_avg/count
+
+y2 = np.sort(y)[-5]
+V2_avg = np.mean(y2)
+
+V1_avg = vol_input
+R_sense = 300e3 
+R_measured = ( V2_avg/((V1_avg-V2_avg)/R_sense) )/1e3
+print(f"Resistor value = {R_measured}")
+
 # print(y)
 # Create interpolation function using cubic spline
 interpolation_function = interp1d(x, y, kind='previous')
@@ -180,7 +205,7 @@ plt.plot(x, y, 'o', label='Original Data')
 plt.plot(x_interpolated, y_interpolated, '-', label='Interpolation')
 # plt.xlim(2, 8)  # Set x-axis limits from 2 to 8
 plt.ylim(0, 5)  # Set y-axis limits from -1 to 1
-plt.xlabel('micros')
+plt.xlabel('microseconds')
 plt.ylabel('y')
 plt.title('Interpolation of Data')
 plt.legend()

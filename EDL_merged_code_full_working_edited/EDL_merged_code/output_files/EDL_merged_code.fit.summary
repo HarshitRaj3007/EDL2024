@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sat Apr 13 22:35:09 2024
+Fitter Status : Successful - Sun Apr 14 10:10:31 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : EDL_merged_code
 Top-level Entity Name : EDL_merged_code
 Family : Cyclone IV E
 Device : EP4CE22F17C8
 Timing Models : Final
-Total logic elements : 1,953 / 22,320 ( 9 % )
-    Total combinational functions : 1,799 / 22,320 ( 8 % )
-    Dedicated logic registers : 918 / 22,320 ( 4 % )
-Total registers : 918
+Total logic elements : 1,960 / 22,320 ( 9 % )
+    Total combinational functions : 1,814 / 22,320 ( 8 % )
+    Dedicated logic registers : 920 / 22,320 ( 4 % )
+Total registers : 920
 Total pins : 49 / 154 ( 32 % )
 Total virtual pins : 0
 Total memory bits : 1,024 / 608,256 ( < 1 % )
