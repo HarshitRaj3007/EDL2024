@@ -1,11 +1,9 @@
-//`default_nettype none
-
+//Deshapande Varad Shailesh
+//21d070024
+//Jan-April 2024 @ IIT Bombay
 
 module EDL_merged_code(
 		input  wire     clk,
-		input wire in_read,
-		output reg HIGH,
-		output reg LOW,
 		
 		output reg[7:0] LED,
 		
@@ -70,36 +68,13 @@ module EDL_merged_code(
 	 end
 	
     
-    reg[329:0] measured_values_CH1_single_vector;	 
+    reg[1289:0] measured_values_CH1_single_vector;	 
 	 initial begin
-	 measured_values_CH1_single_vector <= 330'b000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000111100000001110000000111;
+	 measured_values_CH1_single_vector <= 1290'b000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000111100000001110000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000001111000000011100000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000011110000000111000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000111100000001110000000111;
+
 	 end
 	
 	
-//	 reg[9:0] measured_values_CH0[127:0];
-//	 initial begin
-//	 measured_values_CH0[127][9:0] <= 10'b1001111111;
-//	 measured_values_CH0[126][9:0] <= 10'b1001111111;
-//	 measured_values_CH0[125][9:0] <= 10'b1001111111;
-//	 measured_values_CH0[124][9:0] <= 10'b1001111111;
-//	 measured_values_CH0[123][9:0] <= 10'b1001111111;
-//	 measured_values_CH0[122][9:0] <= 10'b1001111111;
-//	 measured_values_CH0[121][9:0] <= 10'b1001111111;
-//	 measured_values_CH0[120][9:0] <= 10'b1001111111;
-//	 end
-//	
-//	
-//	 reg[9:0] measured_values_CH1[127:0];
-//	 initial begin
-//	 measured_values_CH1[127][9:0] <= 10'b1001111111;
-//	 measured_values_CH1[126][9:0] <= 10'b1001111111;
-//	 measured_values_CH1[125][9:0] <= 10'b1001111111;
-//	 measured_values_CH1[124][9:0] <= 10'b1001111111;
-//	 measured_values_CH1[123][9:0] <= 10'b1001111111;
-//	 measured_values_CH1[122][9:0] <= 10'b1001111111;
-//	 measured_values_CH1[121][9:0] <= 10'b1001111111;
-//	 measured_values_CH1[120][9:0] <= 10'b1001111111;
-//	 end
 	 
 	 reg store_trigger;
 	 initial begin
@@ -195,14 +170,23 @@ module EDL_merged_code(
 	 
 	 //logic flow signals
 	 
-	 reg[23:0] control_signals;
+	 reg[17:0] control_signals;
 	 initial begin
-	 control_signals <= 24'b000000000000000000000000;	
+	 control_signals <= 18'b00000000000000000;	
 	 end		
 	 
 	 reg[2:0] control_signals_received;
 	 initial begin
 	 control_signals_received <= 3'b000;
+	 end
+	 
+	 reg[6:0] pulse_width;
+	 initial begin
+	 pulse_width <= 7'b0000000;
+	 end
+	 reg pulse_width_received;
+	 initial begin
+	 pulse_width_received <= 1'b0;
 	 end
 	 
 	 reg[31:0] counter;
@@ -258,14 +242,14 @@ module EDL_merged_code(
 		always @(posedge clk) begin			//main process
 		
 		
-		if(sample_counter <= 32'd31) begin
+		if(sample_counter <= 32'd127) begin
 			if (store_trigger) begin
 			   sample_index <= sample_counter;
-				measured_values_CH1_single_vector[10*(sample_index+1) +:10] <= measured_val_CH1;
+//				measured_values_CH1_single_vector[10*(sample_index+1) +:10] <= measured_val_CH1;
 			end
 		end
 		
-		if(sample_counter >= 32'd31) begin
+		if(sample_counter >= 32'd127) begin
 			sampling_complete <= 1'b1;
 		end
 		
@@ -308,6 +292,10 @@ module EDL_merged_code(
 		Control_Hz2B <= 1'b0;		
 		Control_Hz3A <= 1'b0;
 		Control_Hz3B <= 1'b1;
+
+
+
+			
 		
 			if (state == 32'd0) begin
 				counter <= counter + 1;
@@ -322,8 +310,8 @@ module EDL_merged_code(
 				writing <= 1'b0;
 				
 				if (both_transferred == 4'b1100) begin
-					push_val_to_DAC <= 1'b1;
-					state <= 32'd9995;			//32'd9995
+//					push_val_to_DAC <= 1'b1;
+					state <= 32'd8001;			//32'd5003
 					both_transferred <= 4'b0101;
 					reading <= 1'b0;
 				   writing <= 1'b0;
@@ -332,32 +320,77 @@ module EDL_merged_code(
 			end
 
 			//control signnals: 8001, 8002, 8003
-			
 			if (state == 32'd8001) begin
 				reading <= 1'b1;
 				writing <= 1'b0;
-				if (control_signals_received == 3'b001) begin
-					state <= 32'd9995;
-					reading <= 1'b1;
+//				count_wait <= count_wait + 1;
+				if (control_signals_received == 3'b001) begin// && count_wait > 2000) begin
+					state <= 32'd8002;
+					reading <= 1'b0;
 				   writing <= 1'b0;
+					count_wait <= 0;
+				end	
+			end			
+			
+			if (state == 32'd8002) begin
+				reading <= 1'b1;
+				writing <= 1'b0;
+//				count_wait <= count_wait + 1;
+				if (control_signals_received == 3'b011) begin// && count_wait > 2000) begin
+					state <= 32'd8003;
+					reading <= 1'b0;
+				   writing <= 1'b0;
+					count_wait <= 0;
 				end	
 			end
 			
-			if (state == 32'd9995) begin
+			if (state == 32'd8003) begin
+				reading <= 1'b1;
+				writing <= 1'b0;
+//				count_wait <= count_wait + 1;
+				if (control_signals_received == 3'b111) begin// && count_wait > 2000) begin
+					state <= 32'd8004;
+					reading <= 1'b0;
+				   writing <= 1'b0;
+					count_wait <= 0;
+				end	
+			end
+			
+			if (state == 32'd8004) begin
+				reading <= 1'b1;
+				writing <= 1'b0;
+//				count_wait <= count_wait + 1;
+				if (pulse_width_received == 1'b1) begin// && count_wait > 2000) begin
+					state <= 32'd8005;
+					reading <= 1'b0;
+				   writing <= 1'b0;
+					count_wait <= 0;
+				end	
+			end
+			
+			
+			
+			if(state == 32'd8005) begin
+				count_wait <= count_wait + 1;
+				if (count_wait == 2000) begin
+					state <= 32'd5003;
+				end
+			end
+			
+			if (state == 32'd5003) begin
 				start_sampling <= 1'b1;
 				push_val_to_DAC <= 1'b0;
 				writing <= 1'b0;
 				reading <= 1'b0;
 				
 				if(sampling_complete == 1'b1) begin
-					state <= 32'd2;
-					
+					state <= 32'd2;		
 					writing <= 1'b0;
 				end
 			end
 			
 			
-			if (state >= 32'd2 && state <= 32'd33) begin
+			if (state >= 32'd2 && state <= 32'd129) begin
 				sampling_complete <= 1'b0;
 				start_sampling <= 1'b0;
 				push_val_to_DAC <= 1'b0;
@@ -366,10 +399,10 @@ module EDL_merged_code(
 				reading <= 1'b0;
 				writing <= 1'b1;
 				if(both_transferred == 4'b1100) begin
-					if (count_wait >= 5) begin
+//					if (count_wait >= 5) begin
 						sending <= 1'b0;
 						writing <= 1'b0;
-					end
+//					end
 					count_wait <= count_wait + 1;
 					both_transferred <= 4'b0101;
 				end
@@ -393,10 +426,29 @@ module EDL_merged_code(
 					
 			end		
 
-			if(state == 32'd34) begin
-				state <= 32'd39;
+			if(state == 32'd130) begin			//32'd130
+				state <= 32'd0;
+				state_integer <= 0;
 				reading <= 1'b0;
 				writing <= 1'b0;
+				store_trigger <= 1'b0;
+				sample_index <= 0;
+				start_sampling <= 1'b0;	
+				sending <= 1'b1;	
+				received_at_laptop <= 1'b0;	
+				MSB_ADC <= 1'b0;
+				sampling_complete <= 1'b0;
+				push_val_to_DAC <= 1'b0;	
+				pulse_value <= 12'b0;	
+				pulse_out_from_DAC <= 12'b0;
+				control_signals <= 18'b00000000000000000;
+				control_signals_received <= 3'b000;
+				pulse_width_received <= 1'b0;
+				pulse_width <= 7'b0000000;
+				counter <= 32'd0;
+				count_sends <= 0;	
+				count_wait <= 0;	
+				both_transferred <= 4'b0101;
 			end
 
 		
@@ -432,8 +484,8 @@ module EDL_merged_code(
 						both_transferred[1:0] <= 2'b00; 
 					end
 					
-//					else if(jtag_uart_readdata[7] && (state == 32'd1 || state == 32'd9995)) begin
-					else if(jtag_uart_readdata[7]) begin
+					else if(jtag_uart_readdata[7] && state <= 32'd5003) begin
+//					else if(jtag_uart_readdata[7]) begin
 						if (jtag_uart_readdata[7:6] == 2'b10) begin
 							received_at_laptop <= 1'b1;
 						end	
@@ -441,18 +493,22 @@ module EDL_merged_code(
 						both_transferred[3:2] <= 2'b11;
 					end
 					
-					else if(state == 32'd8001 || state == 32'd8002 || state == 32'd8003) begin
-						if(state == 32'd8001 && jtag_uart_readdata[7:0] != 8'b00000000) begin // && jtag_uart_readdata[7:0] != 8'b00000000
-							control_signals[7:0] <= jtag_uart_readdata[7:0];
+					else if(state == 32'd8001 || state == 32'd8002 || state == 32'd8003 || state == 32'd8004) begin
+						if(state == 32'd8001 && jtag_uart_readdata[7:6] == 2'b10) begin // && jtag_uart_readdata[7:0] != 8'b00000000
+							control_signals[5:0] <= jtag_uart_readdata[5:0];
 							control_signals_received[0] <= 1'b1;
 						end
-						if(state == 32'd8002) begin
-							control_signals[15:8] <= jtag_uart_readdata[7:0];
+						if(state == 32'd8002 && jtag_uart_readdata[7:6] == 2'b01) begin  //jtag_uart_readdata[7:5] == 3'b010
+							control_signals[11:6] <= jtag_uart_readdata[5:0];				 //control_signals[10:6] <= jtag_uart_readdata[4:0];
 							control_signals_received[1] <= 1'b1;
 						end
-						if(state == 32'd8003) begin
-							control_signals[23:16] <= jtag_uart_readdata[7:0];
+						if(state == 32'd8003 && jtag_uart_readdata[7:6] == 2'b10) begin  //jtag_uart_readdata[7:5] == 3'b011
+							control_signals[17:12] <= jtag_uart_readdata[5:0];				 //control_signals[15:11] <= jtag_uart_readdata[4:0];
 							control_signals_received[2] <= 1'b1;
+						end
+						if(state == 32'd8004 && jtag_uart_readdata[7:6] == 2'b01) begin	//&& jtag_uart_readdata[7] == 3'b1
+							pulse_width[5:0] <= jtag_uart_readdata[5:0];					  //pulse_width[6:0] <= jtag_uart_readdata[6:0];
+							pulse_width_received <= 1'b1;
 						end
 					end		//end of the control signals else if block
 					
@@ -470,20 +526,22 @@ module EDL_merged_code(
 //		  always @(posedge clk) begin			//ADC process
 
 //			 writing <= 1'b1;
-//			 LED[7] <= writing;			
-//			 LED[7:4] <= control_signals[4:0];
-			 LED[6:0] <= state[6:0];
-			 LED[7] <= received_at_laptop;
+
+			
+//			 LED[1:0] <= control_signals[17:16];
+//			 LED[7:2] <= pulse_width[5:0];
+//			 LED[6:0] <= pulse_width[6:0];
+//			 LED[7] <= received_at_laptop;
 //			 LED[7:0] <= control_signals[7:0];
 //			 LED[6:0] <= measured_val[9:3];
 //			 LED[6:0] <= pulse_value[11:5];
 //			 LED[7] <= store_trigger;
 //			 LED[7] <= start_sampling;
 //			 LED[6:0] <= sample_counter[6:0];
-//			 LED[3:0] <= state[3:0];
+			 LED[7:0] <= state[7:0];
 //			 LED[7:0] <= sample_counter[7:0];
-			 LED[6] <= writing;
-			 LED[5] <= reading;
+//			 LED[6] <= writing;
+//			 LED[5] <= reading;
 //			 LED[7] <= sampling_complete;
 //			 LED[4] <= push_val_to_DAC;
 //			 LED[6:0] <= counter[26:20];
@@ -496,7 +554,7 @@ module EDL_merged_code(
 //					state_integer <= state_integer - 2;
 //			 LED[7:0] <= measured_values_CH1_single_vector[(10*state_integer) +: 8];
 
-					if (!MSB_ADC && state != 32'd9995) begin
+					if (!MSB_ADC && state != 32'd5003) begin
 //						jtag_uart_wdata[4:0] <= measured_val_CH1[4:0];
 //						jtag_uart_wdata[4:0] <= measured_values_CH1[state_integer][4:0]; //[state_integer][4:0]
 						jtag_uart_wdata[4:0] <= measured_values_CH1_single_vector[(10*state_integer) +: 5]; //[state_integer][4:0]
@@ -506,7 +564,7 @@ module EDL_merged_code(
 						both_transferred[1:0] <= 2'b00;
 					end
 					
-					else if(MSB_ADC && state != 32'd9995) begin
+					else if(MSB_ADC && state != 32'd5003) begin
 //						jtag_uart_wdata[4:0] <= measured_val_CH1[9:5];
 //						jtag_uart_wdata[4:0] <= measured_values_CH1[state_integer][9:5]; //[state_integer][9:5]
 						jtag_uart_wdata[4:0] <= measured_values_CH1_single_vector[(10*state_integer + 5) +: 5];

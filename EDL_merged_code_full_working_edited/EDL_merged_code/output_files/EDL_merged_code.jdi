@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="eb5a3bcd4f918d015b7e"/>
+    <hash md5_digest_80b="04d18da9d96d54ab3619"/>
   </project>
   <file_info>
     <file device="EP4CE22F17C8" path="EDL_merged_code.sof" usercode="0xFFFFFFFF"/>
@@ -12,8 +12,8 @@
         <parameter name="INSTANCE_ID" type="dec" value="0"/>
         <parameter name="SLD_NODE_INFO" type="ubin" value="00001100000000000110111000000000"/>
         <parameter name="SLD_AUTO_INSTANCE_INDEX" type="string" value="YES"/>
-        <parameter name="LOG2_TXFIFO_DEPTH" type="dec" value="6"/>
-        <parameter name="LOG2_RXFIFO_DEPTH" type="dec" value="6"/>
+        <parameter name="LOG2_TXFIFO_DEPTH" type="dec" value="8"/>
+        <parameter name="LOG2_RXFIFO_DEPTH" type="dec" value="8"/>
         <parameter name="RESERVED" type="dec" value="0"/>
         <parameter name="DATA_WIDTH" type="dec" value="8"/>
         <parameter name="SCAN_LENGTH" type="dec" value="11"/>
@@ -65,7 +65,7 @@
   <sld_infos>
     <sld_info hpath="uart_jtag:uart_jtag1" name="uart_jtag1">
       <assignment_values>
-        <assignment_value text="QSYS_NAME uart_jtag HAS_SOPCINFO 1 GENERATION_ID 1712945470"/>
+        <assignment_value text="QSYS_NAME uart_jtag HAS_SOPCINFO 1 GENERATION_ID 1713110360"/>
       </assignment_values>
       <parameters/>
     </sld_info>

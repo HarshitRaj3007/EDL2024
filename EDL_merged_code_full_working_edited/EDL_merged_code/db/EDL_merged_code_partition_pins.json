@@ -68,10 +68,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "Dout_ADC",
-					"strict" : false
-				},
-				{
 					"name" : "altera_reserved_tms",
 					"strict" : false
 				},

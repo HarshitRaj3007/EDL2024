@@ -1,3 +1,7 @@
+--Deshapande Varad Shailesh
+--21d070024
+--Jan-April 2024 @ IIT Bombay
+
 library ieee;
 use ieee.std_logic_1164.all;
 use IEEE.NUMERIC_STD.ALL;
@@ -294,7 +298,7 @@ measurement_display_proc_2: process(clk_50Mhz)
 				counter_sec_ADC <= 0;
 				
 			elsif(counter_ADC = x"00" ) then		--reset_ADC
-				if(counter_sec_ADC <= 1800000) then							--5 works? | does 3000000, 500000
+				if(counter_sec_ADC <= 5) then							--use 1800000 for 200us time period of square wave 
 					counter_sec_ADC <= counter_sec_ADC + 1;
 					 
 				else
@@ -379,8 +383,8 @@ measurement_display_proc_2: process(clk_50Mhz)
 					if (CH1_completed = '0') then
 						if (sampling_is_go = '1')then
 							CH1_measured_ADC <= rx_buf_ADC;
-							if (sample_counter = b"00000000000000000000000000100000") then
-								sample_counter <= b"00000000000000000000000000100000";
+							if (sample_counter = b"00000000000000000000000010000000") then
+								sample_counter <= b"00000000000000000000000010000000";
 							else
 								sample_counter <= sample_counter + '1';
 							end if;
