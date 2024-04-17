@@ -1,4 +1,8 @@
-def get_control(r_tuple, mode):
+def get_control(r_tuple, mode, r_sense=None):
+    
+    if mode.lower() == "read":
+        assert r_sense is not None, "r_sense must be provided for read mode"
+    
     controls = {
         "1": 0,
         "2": 0,
@@ -24,6 +28,8 @@ def get_control(r_tuple, mode):
         "Hz2B": 0,
         "Hz3A": 0,
         "Hz3B": 0,
+        "Read/Write": 0,
+        "Reset": 0
     }
     if mode == "Write":
         controls["1"] = 1
@@ -34,15 +40,39 @@ def get_control(r_tuple, mode):
         controls["6"] = 0
         controls["7"] = 0
         controls["8"] = 0
+        controls["9A"] = 0
+        controls["9B"] = 1
+        controls["10A"] = 0
+        controls["10B"] = 1
+        controls["Read/Write"] = 1
+        controls["Reset"] = 0
     elif mode == "Read":  # Logic to be updated
+        for i in range(2,7):
+            if i == r_sense:
+                controls[str(i)] = 1
+            else:
+                controls[str(i)] = 0
+        
         controls["1"] = 0
-        controls["2"] = 1
-        controls["3"] = 0
-        controls["4"] = 0
-        controls["5"] = 0
-        controls["6"] = 0
         controls["7"] = 1
         controls["8"] = 1
+        controls["9A"] = 1
+        controls["9B"] = 0
+        controls["10A"] = 1
+        controls["10B"] = 0
+        controls["Read/Write"] = 1
+        controls["Reset"] = 0
+    elif mode == "Reset":
+        for i in range(2,9):
+            controls[str(i)] = 0
+
+        controls["1"] = 1
+        controls["9A"] = 0
+        controls["9B"] = 1
+        controls["10A"] = 0
+        controls["10B"] = 1
+        controls["Read/Write"] = 0
+        controls["Reset"] = 1
     else:
         print("Invalid mode")
 
@@ -96,9 +126,9 @@ def get_control(r_tuple, mode):
     return controls
 
 
-def r_num_to_tuple(r_num):
-    r_num = int(r_num)
-    r_tuple = [0, 0]
-    r_tuple[0] = (r_num - 1) // 3 + 1
-    r_tuple[1] = (r_num - 1) % 3 + 1
-    return r_tuple
+# def r_num_to_tuple(r_num):
+#     r_num = int(r_num)
+#     r_tuple = [0, 0]
+#     r_tuple[0] = (r_num - 1) // 3 + 1
+#     r_tuple[1] = (r_num - 1) % 3 + 1
+#     return r_tuple

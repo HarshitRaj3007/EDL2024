@@ -6,13 +6,15 @@ from helper import *
 
 def to_fpga(V, t, r_num, mode):
     """Send the data to the FPGA
-
+    
     Args:
         V (float): Voltage pulse value
         t (float): Duration of the pulse
         r_num (int): Resistor number
         mode (string): Read or Write mode
     """
+    control_signals = r_num_to_tuple(r_num)
+    print(control_signals)
     print(f"Voltage: {V}, Time: {t}, Resistor Number: {r_num}, Mode: {mode}")
     pass
 

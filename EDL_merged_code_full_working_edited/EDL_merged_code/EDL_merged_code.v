@@ -180,9 +180,9 @@ module EDL_merged_code(
 	 control_signals_received <= 3'b000;
 	 end
 	 
-	 reg[6:0] pulse_width;
+	 reg[5:0] pulse_width;
 	 initial begin
-	 pulse_width <= 7'b0000000;
+	 pulse_width <= 6'b000000;
 	 end
 	 reg pulse_width_received;
 	 initial begin
@@ -245,7 +245,7 @@ module EDL_merged_code(
 		if(sample_counter <= 32'd127) begin
 			if (store_trigger) begin
 			   sample_index <= sample_counter;
-//				measured_values_CH1_single_vector[10*(sample_index+1) +:10] <= measured_val_CH1;
+				measured_values_CH1_single_vector[10*(sample_index+1) +:10] <= measured_val_CH1;
 			end
 		end
 		
@@ -262,36 +262,7 @@ module EDL_merged_code(
 		//the control block starts here
 		
 		
-		controlmain_reset <= 1'b0;
-		controlmain_readwrite <= 1'b1;
-		Control1 <= 1'b0;
-		Control2 <= 1'b0;
-		Control3 <= 1'b0;
-		Control4 <= 1'b1;
 
-		Control5 <= 1'b0;
-		Control6 <= 1'b0;
-		Control7 <= 1'b1;
-		Control8 <= 1'b1;
-
-		Control9A <= 1'b1;
-		Control9B <= 1'b0;
-		Control10A <= 1'b1;
-		Control10B <= 1'b0;
-		
-		Control_Vt1A <= 1'b1;
-		Control_Vt1B <= 1'b0;
-		Control_Vt2A <= 1'b1;
-		Control_Vt2B <= 1'b0;		
-		Control_Vt3A <= 1'b0;
-		Control_Vt3B <= 1'b1;
-
-		Control_Hz1A <= 1'b0;
-		Control_Hz1B <= 1'b1;
-		Control_Hz2A <= 1'b1;
-		Control_Hz2B <= 1'b0;		
-		Control_Hz3A <= 1'b0;
-		Control_Hz3B <= 1'b1;
 
 
 
@@ -371,10 +342,52 @@ module EDL_merged_code(
 			
 			
 			if(state == 32'd8005) begin
+				
+				Control1 <= control_signals[0];
+				Control2 <= control_signals[1];
+				Control3 <= control_signals[2];
+				Control4 <= control_signals[3];
+
+				Control5 <= control_signals[4];
+				Control6 <= control_signals[5];
+				Control7 <= control_signals[6];
+				Control8 <= control_signals[7];
+
+				Control9A <= control_signals[8];
+				Control9B <= !(control_signals[8]);
+				Control10A <= control_signals[9];
+				Control10B <= !(control_signals[9]);
+				
+				Control_Vt1A <= control_signals[10];
+				Control_Vt1B <= !(control_signals[10]);
+				Control_Vt2A <= control_signals[11];
+				Control_Vt2B <= !(control_signals[11]);		
+				Control_Vt3A <= control_signals[12];
+				Control_Vt3B <= !(control_signals[12]);
+
+				Control_Hz1A <= control_signals[13];
+				Control_Hz1B <= !(control_signals[13]);
+				Control_Hz2A <= control_signals[14];
+				Control_Hz2B <= !(control_signals[14]);		
+				Control_Hz3A <= control_signals[15];
+				Control_Hz3B <= !(control_signals[15]);
+				
+				controlmain_reset <= control_signals[16];
+				controlmain_readwrite <= control_signals[17];
+				
+				
+				
 				count_wait <= count_wait + 1;
+								
 				if (count_wait == 2000) begin
+					push_val_to_DAC <= 1'b1;
+				end
+				if (count_wait == 2050) begin
+					push_val_to_DAC <= 1'b0;
+					count_wait <= 0;
 					state <= 32'd5003;
 				end
+				
 			end
 			
 			if (state == 32'd5003) begin
@@ -403,7 +416,7 @@ module EDL_merged_code(
 						sending <= 1'b0;
 						writing <= 1'b0;
 //					end
-					count_wait <= count_wait + 1;
+//					count_wait <= count_wait + 1;
 					both_transferred <= 4'b0101;
 				end
 			end
@@ -427,28 +440,45 @@ module EDL_merged_code(
 			end		
 
 			if(state == 32'd130) begin			//32'd130
-				state <= 32'd0;
+				measured_values_CH1_single_vector <= 1290'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111;
 				state_integer <= 0;
 				reading <= 1'b0;
 				writing <= 1'b0;
-				store_trigger <= 1'b0;
+//				store_trigger <= 1'b0;
 				sample_index <= 0;
 				start_sampling <= 1'b0;	
 				sending <= 1'b1;	
 				received_at_laptop <= 1'b0;	
 				MSB_ADC <= 1'b0;
 				sampling_complete <= 1'b0;
-				push_val_to_DAC <= 1'b0;	
-				pulse_value <= 12'b0;	
 				pulse_out_from_DAC <= 12'b0;
 				control_signals <= 18'b00000000000000000;
 				control_signals_received <= 3'b000;
 				pulse_width_received <= 1'b0;
-				pulse_width <= 7'b0000000;
+				pulse_width <= 6'b000000;
 				counter <= 32'd0;
 				count_sends <= 0;	
-				count_wait <= 0;	
 				both_transferred <= 4'b0101;
+
+				count_wait <= 	count_wait + 1;
+				pulse_value <= 12'b000000000000;
+				
+				if(count_wait == 5) begin
+					push_val_to_DAC <= 1'b1;
+				end
+				
+//				push_val_to_DAC <= 1'b1;
+				if(count_wait == 50) begin
+					push_val_to_DAC <= 1'b0;
+				end
+				
+				if(count_wait == 100) begin
+					state <= 32'd0;
+					count_wait <= 0;
+				end
+				
+					
+					
 			end
 
 		
@@ -469,9 +499,9 @@ module EDL_merged_code(
 //				reading <= 1'b1;
 //				LED <= pulse_out_from_DAC[11:4];
 
-				if(push_val_to_DAC) begin
-					push_val_to_DAC <= 1'b0;
-				end				
+//				if(push_val_to_DAC) begin
+//					push_val_to_DAC <= 1'b0;
+//				end				
 				
 				if(!(jtag_uart_read) && reading) begin
 					jtag_uart_read <= 1'b1;
@@ -489,8 +519,11 @@ module EDL_merged_code(
 						if (jtag_uart_readdata[7:6] == 2'b10) begin
 							received_at_laptop <= 1'b1;
 						end	
-						pulse_value[11:6] <= jtag_uart_readdata[5:0];
-						both_transferred[3:2] <= 2'b11;
+						if(state == 32'd1) begin
+							pulse_value[11:6] <= jtag_uart_readdata[5:0];
+							both_transferred[3:2] <= 2'b11;
+						end
+						
 					end
 					
 					else if(state == 32'd8001 || state == 32'd8002 || state == 32'd8003 || state == 32'd8004) begin
@@ -629,6 +662,7 @@ adc_dac_control adc_dac_control0
 		.start_sampling  (start_sampling),
 		.sample_index_counter  (sample_counter),
 		.store_trigger(store_trigger),
+		.state(state),
 		.ch_display_select (ch_display_select)	//in
 );
 

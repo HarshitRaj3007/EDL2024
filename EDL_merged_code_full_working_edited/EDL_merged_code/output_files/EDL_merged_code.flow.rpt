@@ -1,5 +1,5 @@
 Flow report for EDL_merged_code
-Sun Apr 14 22:41:57 2024
+Wed Apr 17 17:50:58 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Apr 14 22:41:54 2024       ;
+; Flow Status                        ; Successful - Wed Apr 17 17:50:54 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; EDL_merged_code                             ;
 ; Top-level Entity Name              ; EDL_merged_code                             ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,170 / 22,320 ( 5 % )                      ;
-;     Total combinational functions  ; 1,134 / 22,320 ( 5 % )                      ;
-;     Dedicated logic registers      ; 461 / 22,320 ( 2 % )                        ;
-; Total registers                    ; 461                                         ;
+; Total logic elements               ; 4,363 / 22,320 ( 20 % )                     ;
+;     Total combinational functions  ; 3,861 / 22,320 ( 17 % )                     ;
+;     Dedicated logic registers      ; 1,960 / 22,320 ( 9 % )                      ;
+; Total registers                    ; 1960                                        ;
 ; Total pins                         ; 46 / 154 ( 30 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 2,560 / 608,256 ( < 1 % )                   ;
+; Total memory bits                  ; 4,096 / 608,256 ( < 1 % )                   ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/14/2024 22:41:22 ;
+; Start date & time ; 04/17/2024 17:46:17 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; EDL_merged_code     ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1096753642702.171311468105920                               ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1096753642702.171335617622052                               ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                          ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                           ; --            ; --          ; --         ;
 ; MISC_FILE                           ; uart_jtag/synthesis/../uart_jtag.cmp                        ; --            ; --          ; --         ;
@@ -101,11 +101,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4872 MB             ; 00:00:26                           ;
-; Fitter               ; 00:00:05     ; 1.1                     ; 6146 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4886 MB             ; 00:00:02                           ;
-; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:34                           ;
+; Analysis & Synthesis ; 00:04:18     ; 1.0                     ; 5954 MB             ; 00:03:47                           ;
+; Fitter               ; 00:00:13     ; 1.3                     ; 6181 MB             ; 00:00:14                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4695 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.6                     ; 4920 MB             ; 00:00:03                           ;
+; Total                ; 00:04:36     ; --                      ; --                  ; 00:04:06                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
