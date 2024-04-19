@@ -1,9 +1,0 @@
-Manufacturer=Analog Devices
-PartNumber=MAX4737EUD+
-PartCategory=Integrated Circuit
-PackageCategory=Small Outline Packages
-PinCount=14
-Version=2.1
-Released=2016-02-09 10:46:22
-Downloaded=2024-03-17 14:30:36
-3D=Y
