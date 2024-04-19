@@ -64,6 +64,110 @@
 					"strict" : false
 				},
 				{
+					"name" : "controlmain_reset",
+					"strict" : false
+				},
+				{
+					"name" : "controlmain_readwrite",
+					"strict" : false
+				},
+				{
+					"name" : "Control1",
+					"strict" : false
+				},
+				{
+					"name" : "Control2",
+					"strict" : false
+				},
+				{
+					"name" : "Control3",
+					"strict" : false
+				},
+				{
+					"name" : "Control4",
+					"strict" : false
+				},
+				{
+					"name" : "Control5",
+					"strict" : false
+				},
+				{
+					"name" : "Control6",
+					"strict" : false
+				},
+				{
+					"name" : "Control7",
+					"strict" : false
+				},
+				{
+					"name" : "Control8",
+					"strict" : false
+				},
+				{
+					"name" : "Control9A",
+					"strict" : false
+				},
+				{
+					"name" : "Control9B",
+					"strict" : false
+				},
+				{
+					"name" : "Control10A",
+					"strict" : false
+				},
+				{
+					"name" : "Control10B",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Vt1A",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Vt1B",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Vt2A",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Vt2B",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Vt3A",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Vt3B",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Hz1A",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Hz1B",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Hz2A",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Hz2B",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Hz3A",
+					"strict" : false
+				},
+				{
+					"name" : "Control_Hz3B",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},

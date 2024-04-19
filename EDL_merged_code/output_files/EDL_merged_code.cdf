@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("D:/EDL_merged_code/output_files/") File("EDL_merged_code.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("D:/EDL_merged_code_full_working_edited/EDL_merged_code/output_files/") File("EDL_merged_code.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

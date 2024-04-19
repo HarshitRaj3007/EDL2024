@@ -1,11 +1,9 @@
-//`default_nettype none
-
+//Deshapande Varad Shailesh
+//21d070024
+//Jan-April 2024 @ IIT Bombay
 
 module EDL_merged_code(
 		input  wire     clk,
-		input wire in_read,
-		output reg HIGH,
-		output reg LOW,
 		
 		output reg[7:0] LED,
 		
@@ -19,7 +17,38 @@ module EDL_merged_code(
 		input wire Dout_ADC,	//in
 		output wire CS_ADC,	//out
 		output wire Sclk_ADC,	//out
-		input wire ch_display_select	//in
+		input wire ch_display_select,	//in
+		
+		
+		output reg 	controlmain_reset,
+		output reg 	controlmain_readwrite,
+		
+		output reg  Control1,
+		output reg  Control2,
+		output reg  Control3,
+		output reg  Control4,
+		output reg  Control5,
+		output reg  Control6,
+		output reg  Control7,
+		output reg  Control8,
+		output reg  Control9A,
+		output reg  Control9B,
+		output reg  Control10A,
+		output reg  Control10B,
+		output reg  Control_Vt1A,
+		output reg  Control_Vt1B,
+		output reg  Control_Vt2A,
+		output reg  Control_Vt2B, 
+		output reg  Control_Vt3A,
+		output reg  Control_Vt3B,
+		
+		output reg  Control_Hz1A,
+		output reg  Control_Hz1B,
+		output reg  Control_Hz2A,
+		output reg  Control_Hz2B, 
+		output reg  Control_Hz3A,
+		output reg  Control_Hz3B	
+		
     );
 	 	
 	 
@@ -28,24 +57,69 @@ module EDL_merged_code(
 
 	 
 	 //measured_val, MSB_ADC are for ADC
-	 reg[9:0] measured_val;
+	 reg[9:0] measured_val_CH0;
 	 initial begin
-	 measured_val <= 10'b0000000000;	
+	 measured_val_CH0 <= 10'b0000000000;	
 	 end
+
+	 reg[9:0] measured_val_CH1;
+	 initial begin
+	 measured_val_CH1 <= 10'b0000000000;	
+	 end
+	
+    
+    reg[1289:0] measured_values_CH1_single_vector;	 
+	 initial begin
+	 measured_values_CH1_single_vector <= 1290'b000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000111100000001110000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000001111000000011100000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000011110000000111000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000000000000000010000000010000000001100000001000000000000000000000100000000100000000011000000010000000000000000000001000000001000000000110000000100000000111100000001110000000111;
+
+	 end
+	
+	
+	 
+	 reg store_trigger;
+	 initial begin
+	 store_trigger <= 1'b0;	
+	 end	 
+	 
+	 reg[31:0] sample_counter;
+	 initial begin
+	 sample_counter <= 32'd0;	
+	 end
+	 
+	 integer sample_index;
+	 initial begin
+	 sample_index <= 0;
+	 end
+	 
+	 reg start_sampling;
+	 initial begin
+	 start_sampling <= 1'b0;	
+	 end
+
+	 reg sending;					//1 when sending data to laptop, and 0 when confirming if sent data is received. 
+	 initial begin
+	 sending <= 1'b1;	
+	 end
+	 
+	 reg received_at_laptop;
+	 initial begin
+	 received_at_laptop <= 1'b0;	
+	 end
+	 
 	 
 	 reg MSB_ADC;
 	 initial begin
 	 MSB_ADC <= 1'b0;
 	 end
+
+	 reg CH0_done;
+	 initial begin
+	 CH0_done <= 1'b0;
+	 end
 	 
-	 reg[9:0] measured_values[127:0];
-	 reg[11:0] values_transfer_counter;
+	 reg sampling_complete;
 	 initial begin
-	 pulse_value <= 12'b0;	
-	 end		 
-	 reg start_sampling;
-	 initial begin
-	 start_sampling <= 1'b0;	
+	 sampling_complete <= 1'b0;
 	 end	 
 	 
 	 // push_val_to_DAC, pulse_value, pulse_out_from_DAC are for DAC
@@ -83,7 +157,7 @@ module EDL_merged_code(
 	 
     reg [31:0] jtag_uart_wdata;
 	 initial begin
-	 jtag_uart_wdata <= 32'b11111111111111111111111111111111;	
+	 jtag_uart_wdata <= 32'b00000000000000111000000000000000;	
 	 end
 	 
 	 reg        jtag_uart_read;
@@ -95,7 +169,25 @@ module EDL_merged_code(
 	 
 	 
 	 //logic flow signals
-	
+	 
+	 reg[17:0] control_signals;
+	 initial begin
+	 control_signals <= 18'b00000000000000000;	
+	 end		
+	 
+	 reg[2:0] control_signals_received;
+	 initial begin
+	 control_signals_received <= 3'b000;
+	 end
+	 
+	 reg[5:0] pulse_width;
+	 initial begin
+	 pulse_width <= 6'b000000;
+	 end
+	 reg pulse_width_received;
+	 initial begin
+	 pulse_width_received <= 1'b0;
+	 end
 	 
 	 reg[31:0] counter;
 	 initial begin 
@@ -105,6 +197,16 @@ module EDL_merged_code(
 	 parameter t1 = 32'd50;
 	 parameter t2 = 32'd400000000;			//8s given for getting the pulse value
 
+	 integer count_sends;
+	 initial begin
+	 count_sends <= 0;	
+	 end	
+	 
+	 integer count_wait;
+	 initial begin
+	 count_wait <= 0;	
+	 end
+	 
 	 reg reading;
 	 initial begin
 	 reading <= 1'b0;	
@@ -115,11 +217,16 @@ module EDL_merged_code(
 	 writing <= 1'b0;	
 	 end		 
 	
-	 reg[11:0] state;								//0: start, 1: read pulse value, 2: show ADC value
+	 reg[31:0] state;								//0: start, 1: read pulse value, 2: show ADC value
 	 initial begin									
-	 state <= 12'd0;
+	 state <= 32'd0;
 	 end
-
+	 
+	 integer state_integer;								//0: start, 1: read pulse value, 2: show ADC value
+	 initial begin									
+	 state_integer <= 0;
+	 end
+	 
 	 reg[3:0] both_transferred;				//to ensure that both bytes have been sent/received
 	 initial begin									//can take values: 0101(none),1101(only MSB done), 0100(only LSB done), 1100(both MSB LSB done)
 	 both_transferred <= 4'b0101;
@@ -134,43 +241,247 @@ module EDL_merged_code(
 
 		always @(posedge clk) begin			//main process
 		
+		
+		if(sample_counter <= 32'd127) begin
+			if (store_trigger) begin
+			   sample_index <= sample_counter;
+				measured_values_CH1_single_vector[10*(sample_index+1) +:10] <= measured_val_CH1;
+			end
+		end
+		
+		if(sample_counter >= 32'd127) begin
+			sampling_complete <= 1'b1;
+		end
+		
+		
+		
+		
+		
+		
+		
 		//the control block starts here
 		
-			if (state == 12'd0) begin
+		
+
+
+
+
+			
+		
+			if (state == 32'd0) begin
 				counter <= counter + 1;
 				if(counter == 32'd50) begin
-					state <= 12'd1;
+					state <= 32'd1;
 					counter <= 32'd0;
 				end
 			end
 			
-			if (state == 12'd1) begin
+			if (state == 32'd1) begin
 				reading <= 1'b1;
 				writing <= 1'b0;
 				
 				if (both_transferred == 4'b1100) begin
-					state <= 12'd2;
+//					push_val_to_DAC <= 1'b1;
+					state <= 32'd8001;			//32'd5003
 					both_transferred <= 4'b0101;
+					reading <= 1'b0;
+				   writing <= 1'b0;
+					received_at_laptop <= 1'b0;
+				end	
+			end
+
+			//control signnals: 8001, 8002, 8003
+			if (state == 32'd8001) begin
+				reading <= 1'b1;
+				writing <= 1'b0;
+//				count_wait <= count_wait + 1;
+				if (control_signals_received == 3'b001) begin// && count_wait > 2000) begin
+					state <= 32'd8002;
+					reading <= 1'b0;
+				   writing <= 1'b0;
+					count_wait <= 0;
+				end	
+			end			
+			
+			if (state == 32'd8002) begin
+				reading <= 1'b1;
+				writing <= 1'b0;
+//				count_wait <= count_wait + 1;
+				if (control_signals_received == 3'b011) begin// && count_wait > 2000) begin
+					state <= 32'd8003;
+					reading <= 1'b0;
+				   writing <= 1'b0;
+					count_wait <= 0;
+				end	
+			end
+			
+			if (state == 32'd8003) begin
+				reading <= 1'b1;
+				writing <= 1'b0;
+//				count_wait <= count_wait + 1;
+				if (control_signals_received == 3'b111) begin// && count_wait > 2000) begin
+					state <= 32'd8004;
+					reading <= 1'b0;
+				   writing <= 1'b0;
+					count_wait <= 0;
+				end	
+			end
+			
+			if (state == 32'd8004) begin
+				reading <= 1'b1;
+				writing <= 1'b0;
+//				count_wait <= count_wait + 1;
+				if (pulse_width_received == 1'b1) begin// && count_wait > 2000) begin
+					state <= 32'd8005;
+					reading <= 1'b0;
+				   writing <= 1'b0;
+					count_wait <= 0;
+				end	
+			end
+			
+			
+			
+			if(state == 32'd8005) begin
+				
+				Control1 <= control_signals[0];
+				Control2 <= control_signals[1];
+				Control3 <= control_signals[2];
+				Control4 <= control_signals[3];
+
+				Control5 <= control_signals[4];
+				Control6 <= control_signals[5];
+				Control7 <= control_signals[6];
+				Control8 <= control_signals[7];
+
+				Control9A <= control_signals[8];
+				Control9B <= !(control_signals[8]);
+				Control10A <= control_signals[9];
+				Control10B <= !(control_signals[9]);
+				
+				Control_Vt1A <= control_signals[10];
+				Control_Vt1B <= !(control_signals[10]);
+				Control_Vt2A <= control_signals[11];
+				Control_Vt2B <= !(control_signals[11]);		
+				Control_Vt3A <= control_signals[12];
+				Control_Vt3B <= !(control_signals[12]);
+
+				Control_Hz1A <= control_signals[13];
+				Control_Hz1B <= !(control_signals[13]);
+				Control_Hz2A <= control_signals[14];
+				Control_Hz2B <= !(control_signals[14]);		
+				Control_Hz3A <= control_signals[15];
+				Control_Hz3B <= !(control_signals[15]);
+				
+				controlmain_reset <= control_signals[16];
+				controlmain_readwrite <= control_signals[17];
+				
+				
+				
+				count_wait <= count_wait + 1;
+								
+				if (count_wait == 2000) begin
+					push_val_to_DAC <= 1'b1;
+				end
+				if (count_wait == 2050) begin
+					push_val_to_DAC <= 1'b0;
+					count_wait <= 0;
+					state <= 32'd5003;
 				end
 				
 			end
 			
-			if (state >= 12'd2 && state <= 12'd129) begin
+			if (state == 32'd5003) begin
+				start_sampling <= 1'b1;
+				push_val_to_DAC <= 1'b0;
+				writing <= 1'b0;
+				reading <= 1'b0;
+				
+				if(sampling_complete == 1'b1) begin
+					state <= 32'd2;		
+					writing <= 1'b0;
+				end
+			end
+			
+			
+			if (state >= 32'd2 && state <= 32'd129) begin
+				sampling_complete <= 1'b0;
+				start_sampling <= 1'b0;
+				push_val_to_DAC <= 1'b0;
+				
+			if(sending) begin
 				reading <= 1'b0;
 				writing <= 1'b1;
-				start_sampling <= 1'b1;
-				
-				if (both_transferred == 4'b1100) begin
-					state <= state + 12'd1;
+				if(both_transferred == 4'b1100) begin
+//					if (count_wait >= 5) begin
+						sending <= 1'b0;
+						writing <= 1'b0;
+//					end
+//					count_wait <= count_wait + 1;
 					both_transferred <= 4'b0101;
 				end
-			end	
-			
-			if (state == 12'd130)begin
-				reading <= 1'b0;
-				writing <= 1'b0;
 			end
 			
+			else begin
+				reading <= 1'b1;
+				writing <= 1'b0;
+				if (received_at_laptop) begin
+					state <= state + 32'd1;
+					state_integer <= state_integer + 1;
+					sending <= 1'b1;
+					both_transferred <= 4'b0101;
+					reading <= 1'b0;
+					writing <= 1'b0;
+					received_at_laptop <= 1'b0;
+				end				
+			end
+				
+
+					
+			end		
+
+			if(state == 32'd130) begin			//32'd130
+				measured_values_CH1_single_vector <= 1290'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111;
+				state_integer <= 0;
+				reading <= 1'b0;
+				writing <= 1'b0;
+//				store_trigger <= 1'b0;
+				sample_index <= 0;
+				start_sampling <= 1'b0;	
+				sending <= 1'b1;	
+				received_at_laptop <= 1'b0;	
+				MSB_ADC <= 1'b0;
+				sampling_complete <= 1'b0;
+				pulse_out_from_DAC <= 12'b0;
+				control_signals <= 18'b00000000000000000;
+				control_signals_received <= 3'b000;
+				pulse_width_received <= 1'b0;
+				pulse_width <= 6'b000000;
+				counter <= 32'd0;
+				count_sends <= 0;	
+				both_transferred <= 4'b0101;
+
+				count_wait <= 	count_wait + 1;
+				pulse_value <= 12'b000000000000;
+				
+				if(count_wait == 5) begin
+					push_val_to_DAC <= 1'b1;
+				end
+				
+//				push_val_to_DAC <= 1'b1;
+				if(count_wait == 50) begin
+					push_val_to_DAC <= 1'b0;
+				end
+				
+				if(count_wait == 100) begin
+					state <= 32'd0;
+					count_wait <= 0;
+				end
+				
+					
+					
+			end
+
+		
 //		end		//end of control process
 			
 			
@@ -188,9 +499,9 @@ module EDL_merged_code(
 //				reading <= 1'b1;
 //				LED <= pulse_out_from_DAC[11:4];
 
-				if(push_val_to_DAC) begin
-					push_val_to_DAC <= 1'b0;
-				end				
+//				if(push_val_to_DAC) begin
+//					push_val_to_DAC <= 1'b0;
+//				end				
 				
 				if(!(jtag_uart_read) && reading) begin
 					jtag_uart_read <= 1'b1;
@@ -198,17 +509,43 @@ module EDL_merged_code(
 				if(jtag_uart_read && !jtag_uart_waitrequest) begin
 					jtag_uart_read <= 1'b0;
 					
-					if(!jtag_uart_readdata[7]) begin
+					if(!jtag_uart_readdata[7] && state == 32'd1) begin
 						pulse_value[5:0] <= jtag_uart_readdata[5:0];
 						both_transferred[1:0] <= 2'b00; 
 					end
 					
-					else begin
-						pulse_value[11:6] <= jtag_uart_readdata[5:0];	
-						push_val_to_DAC <= 1'b1;
-						both_transferred[3:2] <= 2'b11;
+					else if(jtag_uart_readdata[7] && state <= 32'd5003) begin
+//					else if(jtag_uart_readdata[7]) begin
+						if (jtag_uart_readdata[7:6] == 2'b10) begin
+							received_at_laptop <= 1'b1;
+						end	
+						if(state == 32'd1) begin
+							pulse_value[11:6] <= jtag_uart_readdata[5:0];
+							both_transferred[3:2] <= 2'b11;
+						end
+						
 					end
-				end
+					
+					else if(state == 32'd8001 || state == 32'd8002 || state == 32'd8003 || state == 32'd8004) begin
+						if(state == 32'd8001 && jtag_uart_readdata[7:6] == 2'b10) begin // && jtag_uart_readdata[7:0] != 8'b00000000
+							control_signals[5:0] <= jtag_uart_readdata[5:0];
+							control_signals_received[0] <= 1'b1;
+						end
+						if(state == 32'd8002 && jtag_uart_readdata[7:6] == 2'b01) begin  //jtag_uart_readdata[7:5] == 3'b010
+							control_signals[11:6] <= jtag_uart_readdata[5:0];				 //control_signals[10:6] <= jtag_uart_readdata[4:0];
+							control_signals_received[1] <= 1'b1;
+						end
+						if(state == 32'd8003 && jtag_uart_readdata[7:6] == 2'b10) begin  //jtag_uart_readdata[7:5] == 3'b011
+							control_signals[17:12] <= jtag_uart_readdata[5:0];				 //control_signals[15:11] <= jtag_uart_readdata[4:0];
+							control_signals_received[2] <= 1'b1;
+						end
+						if(state == 32'd8004 && jtag_uart_readdata[7:6] == 2'b01) begin	//&& jtag_uart_readdata[7] == 3'b1
+							pulse_width[5:0] <= jtag_uart_readdata[5:0];					  //pulse_width[6:0] <= jtag_uart_readdata[6:0];
+							pulse_width_received <= 1'b1;
+						end
+					end		//end of the control signals else if block
+					
+				end			//end of reading block for jtag
 //			end				//end of DAC process
 		
 		
@@ -222,41 +559,64 @@ module EDL_merged_code(
 //		  always @(posedge clk) begin			//ADC process
 
 //			 writing <= 1'b1;
+
+			
+//			 LED[1:0] <= control_signals[17:16];
+//			 LED[7:2] <= pulse_width[5:0];
+//			 LED[6:0] <= pulse_width[6:0];
+//			 LED[7] <= received_at_laptop;
+//			 LED[7:0] <= control_signals[7:0];
 //			 LED[6:0] <= measured_val[9:3];
-			 LED[6:0] <= pulse_value[11:5];
-//			 LED[7:0] <= measured_values[19][7:0];
-			 LED[7] <= writing;
-			
+//			 LED[6:0] <= pulse_value[11:5];
+//			 LED[7] <= store_trigger;
+//			 LED[7] <= start_sampling;
+//			 LED[6:0] <= sample_counter[6:0];
+			 LED[7:0] <= state[7:0];
+//			 LED[7:0] <= sample_counter[7:0];
+//			 LED[6] <= writing;
+//			 LED[5] <= reading;
+//			 LED[7] <= sampling_complete;
+//			 LED[4] <= push_val_to_DAC;
 //			 LED[6:0] <= counter[26:20];
-			
+//			 LED[7:0] <= measured_values_CH1[sample_index][7:0];
 			
 				if(!(jtag_uart_write) && writing) begin
 					jtag_uart_write <= 1'b1;
 					
-					if (!MSB_ADC) begin
-//						jtag_uart_wdata[4:0] <= measured_val[4:0];
-						jtag_uart_wdata[4:0] <= measured_values[state-12'd2][4:0];
+//					state_integer <= state;
+//					state_integer <= state_integer - 2;
+//			 LED[7:0] <= measured_values_CH1_single_vector[(10*state_integer) +: 8];
+
+					if (!MSB_ADC && state != 32'd5003) begin
+//						jtag_uart_wdata[4:0] <= measured_val_CH1[4:0];
+//						jtag_uart_wdata[4:0] <= measured_values_CH1[state_integer][4:0]; //[state_integer][4:0]
+						jtag_uart_wdata[4:0] <= measured_values_CH1_single_vector[(10*state_integer) +: 5]; //[state_integer][4:0]
+//						LED[7:0] <= measured_values_CH1[state_integer][7:0];
 						jtag_uart_wdata[7:5] <= 3'b000; 
 						MSB_ADC <= 1'b1;
 						both_transferred[1:0] <= 2'b00;
 					end
 					
-					else begin
-//						jtag_uart_wdata[4:0] <= measured_val[9:5];
-						jtag_uart_wdata[4:0] <= measured_values[state-12'd2][9:5];
+					else if(MSB_ADC && state != 32'd5003) begin
+//						jtag_uart_wdata[4:0] <= measured_val_CH1[9:5];
+//						jtag_uart_wdata[4:0] <= measured_values_CH1[state_integer][9:5]; //[state_integer][9:5]
+						jtag_uart_wdata[4:0] <= measured_values_CH1_single_vector[(10*state_integer + 5) +: 5];
 						jtag_uart_wdata[7:5] <= 3'b111;
 						MSB_ADC <= 1'b0;
-						both_transferred[1:0] <= 2'b11;
+						both_transferred[3:2] <= 2'b11;
 					end
+					
+					
 				end
 				
-//				if(jtag_uart_write && !jtag_uart_waitrequest) begin
-				if(jtag_uart_write) begin
+				if(jtag_uart_write && !jtag_uart_waitrequest) begin
+//				if(jtag_uart_write) begin
 					jtag_uart_write <= 1'b0;
 				end
 //		  end						//end of ADC process
 		  
-		  
+		  		
+
 		  //ADC block ends here
 
 			end //ending main process
@@ -297,11 +657,15 @@ adc_dac_control adc_dac_control0
 		.Dout_ADC 		(Dout_ADC),	//in
 		.CS_ADC	 		(CS_ADC),	//out
 		.Sclk_ADC 		(Sclk_ADC),	//out
-		.output_ADC	(measured_val),		//out
-		.ch_display_select (ch_display_select),	//in
-		.start_sampling(start_sampling),				//in
-		.measured_values({measured_values[127], measured_values[126], measured_values[125], measured_values[124], measured_values[123], measured_values[122], measured_values[121], measured_values[120], measured_values[119], measured_values[118], measured_values[117], measured_values[116], measured_values[115], measured_values[114], measured_values[113], measured_values[112], measured_values[111], measured_values[110], measured_values[109], measured_values[108], measured_values[107], measured_values[106], measured_values[105], measured_values[104], measured_values[103], measured_values[102], measured_values[101], measured_values[100], measured_values[99], measured_values[98], measured_values[97], measured_values[96], measured_values[95], measured_values[94], measured_values[93], measured_values[92], measured_values[91], measured_values[90], measured_values[89], measured_values[88], measured_values[87], measured_values[86], measured_values[85], measured_values[84], measured_values[83], measured_values[82], measured_values[81], measured_values[80], measured_values[79], measured_values[78], measured_values[77], measured_values[76], measured_values[75], measured_values[74], measured_values[73], measured_values[72], measured_values[71], measured_values[70], measured_values[69], measured_values[68], measured_values[67], measured_values[66], measured_values[65], measured_values[64], measured_values[63], measured_values[62], measured_values[61], measured_values[60], measured_values[59], measured_values[58], measured_values[57], measured_values[56], measured_values[55], measured_values[54], measured_values[53], measured_values[52], measured_values[51], measured_values[50], measured_values[49], measured_values[48], measured_values[47], measured_values[46], measured_values[45], measured_values[44], measured_values[43], measured_values[42], measured_values[41], measured_values[40], measured_values[39], measured_values[38], measured_values[37], measured_values[36], measured_values[35], measured_values[34], measured_values[33], measured_values[32], measured_values[31], measured_values[30], measured_values[29], measured_values[28], measured_values[27], measured_values[26], measured_values[25], measured_values[24], measured_values[23], measured_values[22], measured_values[21], measured_values[20], measured_values[19], measured_values[18], measured_values[17], measured_values[16], measured_values[15], measured_values[14], measured_values[13], measured_values[12], measured_values[11], measured_values[10], measured_values[9], measured_values[8], measured_values[7], measured_values[6], measured_values[5], measured_values[4], measured_values[3], measured_values[2], measured_values[1], measured_values[0]})
+		.output_ADC_CH0	(measured_val_CH0),		//out
+		.output_ADC_CH1   (measured_val_CH1),
+		.start_sampling  (start_sampling),
+		.sample_index_counter  (sample_counter),
+		.store_trigger(store_trigger),
+		.state(state),
+		.ch_display_select (ch_display_select)	//in
 );
+
 
 
 endmodule
